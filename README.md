@@ -1,54 +1,66 @@
-# React + TypeScript + Vite
+# 🌐 webtres.uy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**webtres.uy** is the official website of the Web3 club in Uruguay — a community focused on education, events, and content around blockchains, and decentralized technologies in Uruguay and beyond.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✍️ Educational blog about Web3 and Ethereum
+- 📅 Local and global Web3 event listings
+- 🌐 Multilingual support (Spanish 🇪🇸 / English 🇬🇧)
+- 🌓 Dark mode and light mode
+- 📱 Mobile-first and fully responsive design
+- ⚛️ Frontend powered by React + TypeScript + Tailwind CSS
+- 🛠️ Backend with Node.js + Express + PostgreSQL (coming soon)
+- ♻️ Modular and reusable UI components
 
-## Expanding the ESLint configuration
+## 🚀 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend**: React, TypeScript, Tailwind CSS, React Router
+- **Internationalization**: i18next
+- **Styling**: Tailwind CSS with custom design tokens (`theme.config.ts`)
+- **State management**: Context API (Zustand optional)
+- **Backend**: Node.js + Express (in progress)
+- **Database**: PostgreSQL + Prisma (in progress)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Getting Started
+
+```bash
+git clone https://github.com/fre4fun/webtresuy-website.git
+cd webtresuy-website
+pnpm install
+pnpm dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+> Requirements:
+> - Node.js 18+
+> - pnpm (`npm install -g pnpm`)
+> - Vite (already included via template)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🌍 Project Structure
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
 ```
+src/
+├── components/         # Reusable UI components
+├── pages/              # Main pages: Home, Blog, Events, Contact
+├── i18n/               # Translation files
+├── theme.config.ts     # Design tokens and theme settings
+├── tailwind.config.js  # Tailwind CSS config
+└── App.tsx             # App entry and routes
+```
+
+## 📦 Useful Scripts
+
+```bash
+pnpm dev       # Start development server
+pnpm build     # Build for production
+pnpm preview   # Preview production build
+```
+
+## 📬 Contact
+
+Want to join or collaborate?  
+Email us at contacto@webtres.uy or visit [webtres.uy](https://webtres.uy)
+
+## 🧠 License
+
+GPLv3 — Free to use, modify and share.
