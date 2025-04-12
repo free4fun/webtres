@@ -1,0 +1,42 @@
+{
+    "home": {
+        "hero": {
+            "title": "Web3 en Uruguay comienza acá.",
+            "description": "Unite a una comunidad descentralizada que construye el futuro del web a través de eventos, educación y colaboración.",
+            "cta": "Unirse al Club"
+        },
+        "about": {
+            "title": "Sobre Webtres.uy",
+            "text": "Somos una comunidad sin fines de lucro que promueve tecnologías abiertas como Ethereum y blockchain en Uruguay y la región."
+        },
+        "events": {
+            "title": "Próximos eventos",
+            "cta": "Ver todos",
+            "card": {
+                "title": "Evento #{{number}}",
+                "details": "27 de abril · Montevideo · Charlas + Pizza"
+            }
+        },
+        "blog": {
+            "title": "Últimos artículos",
+            "cta": "Ir al Blog",
+            "card": {
+                "title": "Entendiendo Web3 #{{number}}",
+                "summary": "Un resumen corto de qué es Web3 y por qué importa."
+            }
+        },
+        "cta": {
+            "title": "Involucrate",
+            "description": "¿Querés colaborar, venir a meetups o escribir? ¡Queremos saber de vos!",
+            "button": "Contactanos"
+        }
+    },
+    "nav": {
+        "home": "Start",
+        "blog": "Blog",
+        "about": "About",
+        "events": "Events",
+        "contact": "Contact"
+    },
+    "join_now": "Join now"
+}

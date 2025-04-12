@@ -1,0 +1,21 @@
+[
+    {
+      "id": "1",
+      "slug": "what-is-web3",
+      "date": "2025-04-05",
+      "title": "What is Web3?",
+      "summary": "An introduction to Web3 and why it matters.",
+      "content": "Web3 is the next evolution of the internet, focused on decentralization, user ownership, and smart contracts on the blockchain.",
+      "image": "/images/blog/web3.jpg"
+    },
+    {
+      "id": "2",
+      "slug": "ethereum-made-simple",
+      "date": "2025-04-10",
+      "title": "Ethereum made simple",
+      "summary": "Understand how Ethereum works and its potential.",
+      "content": "Ethereum is a decentralized platform that runs smart contracts: apps that run exactly as programmed without downtime or interference.",
+      "image": "/images/blog/web3.jpg"
+    }
+  ]
+  

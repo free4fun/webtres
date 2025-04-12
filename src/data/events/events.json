@@ -1,0 +1,22 @@
+[
+    {
+      "id": "1",
+      "slug": "ethereum-meetup-montevideo",
+      "date": "2025-04-20",
+      "title": "Ethereum Meetup Montevideo",
+      "location": "Montevideo, Uruguay",
+      "description": "Un encuentro informal para entusiastas de Ethereum en Montevideo.",
+      "details": "Reunión abierta con presentaciones sobre contratos inteligentes, rollups, y herramientas para desarrolladores. Habrá pizza, merch y mucho networking.",
+      "image": "/images/events/web3.jpg"
+    },
+    {
+      "id": "2",
+      "slug": "hackathon-web3-uruguay",
+      "date": "2025-05-04",
+      "title": "Hackathon Web3 Uruguay",
+      "location": "Atlántida, Canelones",
+      "description": "Una hackathon para crear soluciones descentralizadas desde Uruguay.",
+      "details": "Evento presencial de 2 días donde desarrolladores, diseñadores y educadores construirán herramientas Web3 en equipo. Premios para los mejores proyectos.",
+      "image": "/images/events/web3.jpg"
+    }
+]
