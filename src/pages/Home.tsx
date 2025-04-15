@@ -16,16 +16,18 @@ const Home = () => {
 
       {/* Hero Section */}
       <section className="text-center space-y-6 px-4 max-w-4xl mx-auto">
+        <img src="/images/webtres.png" alt="Webtres logo" className="w-24 h-24 sm:w-80 sm:h-80 mx-auto" />
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">{t("home.hero.title")}</h1>
         <p className="text-muted-foreground text-lg">{t("home.hero.description")}</p>
-        <Button size="lg">{t("home.hero.cta")}</Button>
+        <Link to="https://t.me/webtres_uy"><Button size="lg">{t("home.hero.cta")}</Button></Link>
       </section>
 
       {/* About Section */}
-      <section className="bg-muted py-16 text-center px-4 transition-colors duration-300">
+      <section className="bg-muted/40 py-16 px-4 text-center">
         <div className="max-w-3xl mx-auto space-y-4">
           <h2 className="text-2xl font-semibold">{t("home.about.title")}</h2>
           <p className="text-muted-foreground">{t("home.about.text")}</p>
+          <Link to="/about"><Button variant="secondary">{t("home.about.button")}</Button></Link>
         </div>
       </section>
 
@@ -72,8 +74,8 @@ const Home = () => {
           <h2 className="text-2xl font-semibold">{t("home.community.title")}</h2>
           <p className="text-muted-foreground">{t("home.community.description")}</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button variant="secondary">{t("home.community.action1")}</Button>
-            <Button variant="secondary">{t("home.community.action2")}</Button>
+            <Link to="/community"><Button variant="secondary">{t("home.community.community")}</Button></Link>
+            <Link to="/contribute"><Button variant="secondary">{t("home.community.contribute")}</Button></Link>
           </div>
         </div>
       </section>

@@ -23,7 +23,6 @@ const Blog = () => {
   const [visiblePosts, setVisiblePosts] = useState(allPosts.slice(0, POSTS_PER_VIEW))
   const [renderKey, setRenderKey] = useState(0)
   const [loading, setLoading] = useState(false)
-  const [animationDirection, setAnimationDirection] = useState<"up" | "down" | "">("")
 
   const touchStartY = useRef(0)
   const touchEndY = useRef(0)
@@ -41,27 +40,24 @@ const Blog = () => {
   const handleNext = () => {
     if (loading) return
     setLoading(true)
-    setAnimationDirection("up")
     setTimeout(() => {
       const newStart = (startIndex + postsPerRow) % total
       setStartIndex(newStart)
       updateVisiblePosts(newStart)
       setLoading(false)
-      setTimeout(() => setAnimationDirection(""), 500)
     }, 800)
   }
 
   const handlePrev = () => {
     if (loading) return
     setLoading(true)
-    setAnimationDirection("down")
     setTimeout(() => {
       const newStart = (startIndex - postsPerRow + total) % total
       setStartIndex(newStart)
       updateVisiblePosts(newStart)
       setLoading(false)
-      setTimeout(() => setAnimationDirection(""), 500)
-    }, 800)
+
+    }, 400)
   }
 
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -104,7 +100,7 @@ const Blog = () => {
           <>
             <Button
               onClick={handlePrev}
-              className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black/60 text-white hover:bg-black dark:bg-white/60 dark:text-black dark:hover:bg-white rounded-full p-2"
+              className="hidden md:flex absolute left-5 top-1/2 -translate-y-1/2 z-10 rounded-full p-2"
               aria-label="Previous"
             >
               <ChevronLeft />
@@ -112,7 +108,7 @@ const Blog = () => {
 
             <Button
               onClick={handleNext}
-              className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black/60 text-white hover:bg-black dark:bg-white/60 dark:text-black dark:hover:bg-white rounded-full p-2"
+              className="hidden md:flex absolute right-5 top-1/2 -translate-y-1/2 z-10  rounded-full p-2"
               aria-label="Next"
             >
               <ChevronRight />
@@ -126,8 +122,6 @@ const Blog = () => {
           className={clsx(
             "grid gap-6 transition-transform duration-500",
             postsPerRow === 1 ? "grid-cols-1" : "md:grid-cols-3",
-            animationDirection === "up" && "-translate-y-10 opacity-0",
-            animationDirection === "down" && "translate-y-10 opacity-0"
           )}
         >
           {visiblePosts.map((post) => (

@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { MdArrowCircleLeft, MdArrowCircleRight } from "react-icons/md"
 import { Button } from "@/components/ui/button"
 import { PostCard } from "@/components/PostCard"
 import type { BlogPost } from "@/data/blog/types"
@@ -41,7 +41,7 @@ export const BlogCarousel = ({ posts }: BlogCarouselProps) => {
 
   return (
     <div className="relative w-full overflow-hidden">
-      {/* Flecha izquierda */}
+      {/* Arrow Left */}
       {posts.length > itemsPerView && (
         <Button
           onClick={handlePrev}
@@ -50,11 +50,11 @@ export const BlogCarousel = ({ posts }: BlogCarouselProps) => {
           rounded-full p-2"
           aria-label="Previous"
         >
-          <ChevronLeft />
+          <MdArrowCircleLeft />
         </Button>
       )}
 
-      {/* Carrusel visible */}
+      {/* Carousel */}
       <div
         ref={containerRef}
         className="flex transition-transform duration-500 gap-4"
@@ -72,7 +72,7 @@ export const BlogCarousel = ({ posts }: BlogCarouselProps) => {
         ))}
       </div>
 
-      {/* Flecha derecha */}
+      {/* Arrow Right */}
       {posts.length > itemsPerView && (
         <Button
           onClick={handleNext}
@@ -81,7 +81,7 @@ export const BlogCarousel = ({ posts }: BlogCarouselProps) => {
           rounded-full p-2"
           aria-label="Next"
         >
-          <ChevronRight />
+          <MdArrowCircleRight />
         </Button>
       )}
     </div>

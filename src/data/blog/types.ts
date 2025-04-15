@@ -3,6 +3,7 @@ export type BlogPost = {
     slug: string
     date: string
     title: string
+    author: string
     summary: string
     content: string
     tags?: string[]

@@ -10,6 +10,8 @@ import NotFound from "@/pages/NotFound";
 function App() {
   const Home = lazy(() => import("@/pages/Home"))
   const About = lazy(() => import("@/pages/About"))
+  const Community = lazy(() => import("@/pages/Community"))
+  const Contribute = lazy(() => import("@/pages/Contribute"))
   const Blog = lazy(() => import("@/pages/Blog"))
   const Article = lazy(() => import("@/pages/Article"))
   const Events = lazy(() => import("@/pages/Events"))
@@ -23,6 +25,8 @@ function App() {
         <Route element={<Layout/>}>
           <Route path="/" element={<Suspense fallback={<Loading/>}><Home/></Suspense>}/>
           <Route path="/about" element={<Suspense fallback={<Loading/>}><About/></Suspense>}/>
+          <Route path="/community" element={<Suspense fallback={<Loading/>}><Community/></Suspense>}/>
+          <Route path="/contribute" element={<Suspense fallback={<Loading/>}><Contribute/></Suspense>}/>          
           <Route path="/blog" element={<Suspense fallback={<Loading/>}><Blog/></Suspense>}/>
           <Route path="/blog/:slug" element={<Suspense fallback={<Loading/>}><Article/></Suspense>}/>
           <Route path="/events" element={<Suspense fallback={<Loading/>}><Events/></Suspense>}/>

@@ -13,10 +13,7 @@ export const LanguageSwitcher = () => {
   };
 
   return (
-    <button
-      onClick={toggleLanguage}
-      className="text-sm px-3 py-1 border rounded hover:bg-neutral-200 dark:hover:bg-neutral-700 transition"
-    >
+    <button onClick={toggleLanguage} className="text-sm px-3 py-1 border rounded hover:bg-neutral-200 dark:hover:bg-neutral-700 transition">
       {i18n.language === "es" ? "EN" : "ES"}
     </button>
   );

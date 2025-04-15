@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { CalendarDays, MapPin } from "lucide-react"
+import { MdCalendarToday, MdLocationOn } from "react-icons/md"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 
 interface EventCardProps {
@@ -18,7 +18,7 @@ interface EventCardProps {
 export const EventCard = ({ slug, title, date, location, description, image }: EventCardProps) => {
   return (
     <Link to={`/events/${slug}`} key={slug}>
-    <Card className="bg-card text-card-foreground overflow-hidden">
+    <Card className="pt-0 pb-6 bg-card text-card-foreground overflow-hidden">
       {image && (
         <div className="aspect-[3/2] overflow-hidden">
           <img
@@ -29,18 +29,19 @@ export const EventCard = ({ slug, title, date, location, description, image }: E
         </div>
       )}
       <CardHeader>
-        <CardTitle className="text-lg">{title}</CardTitle>
-      </CardHeader>
-      <CardContent className="space-y-2">
+        <CardTitle className="text-lg truncate">{title}</CardTitle>
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <CalendarDays className="w-4 h-4" />
+          <MdCalendarToday className="w-4 h-4" />
           <span>{date}</span>
         </div>
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <MapPin className="w-4 h-4" />
+          <MdLocationOn className="w-4 h-4" />
           <span>{location}</span>
         </div>
-        <p className="text-sm text-muted-foreground">{description}</p>
+      </CardHeader>
+      <CardContent className="space-y-2">
+        
+        <p className="text-sm text-muted-foreground line-clamp-3">{description}</p>
       </CardContent>
     </Card>
     </Link>

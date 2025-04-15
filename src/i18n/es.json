@@ -1,13 +1,22 @@
 {
+    "nav": {
+        "home": "Inicio",
+        "about": "Sobre nosotros",
+        "community": "Comunidad",
+        "contribute": "Colaborar",
+        "events": "Eventos",
+        "contact": "Contacto"
+    },
     "home": {
         "hero": {
             "title": "Web3 en Uruguay comienza acá.",
             "description": "Unite a una comunidad descentralizada que construye el futuro del web a través de eventos, educación y colaboración.",
-            "cta": "Unirse al Club"
+            "cta": "Quiero unirme"
         },
         "about": {
-            "title": "Sobre Webtres.uy",
-            "text": "Somos una comunidad sin fines de lucro que promueve tecnologías abiertas como Ethereum y blockchain en Uruguay y la región."
+            "title": "Sobre nosotros",
+            "text": "Somos una organización sin fines de lucro que promueve las tecnologías Blockchains, Web3 y DLTs en Uruguay. Nos enfocamos en la educación abierta, la comunidad colaborativa y la creación de espacios donde cualquiera puede aprender, compartir y construir.",
+            "button": "Saber más"
         },
         "events": {
             "title": "Próximos eventos",
@@ -19,9 +28,9 @@
         },
         "community": {
             "title": "Unite a la comunidad",
-            "description": "Explorá, conectá y contribuí con Webtres.uy. Podés escribir, organizar eventos o simplemente participar.",
-            "action1": "Ver comunidad",
-            "action2": "Cómo colaborar"
+            "description": "Explorá, conectá y contribuí con webtres. Podés escribir, organizar eventos o simplemente participar.",
+            "community": "Ver comunidad",
+            "contribute": "Cómo colaborar"
         },
         "cta": {
             "title": "Involucrate",
@@ -29,12 +38,20 @@
             "button": "Contactanos"
         }
     },
-    "nav": {
-        "home": "Inicio",
-        "blog": "Blog",
-        "about": "Acerca de",
-        "events": "Eventos",
-        "contact": "Contacto"
+    "about": {
+        "title": "Sobre webtres",
+        "mission": "Impulsamos el conocimiento, la comunidad y la tecnología Web3 en Uruguay y América Latina.",
+        "description": "webtres es una organización sin fines de lucro donde se aprende, se construye y se comparte. Organizamos eventos, publicamos contenidos educativos y conectamos a personas interesadas en Blockchain, Web3 y tecnologías descentralizadas.",
+        "education": {
+            "title": "Educación abierta",
+            "text": "Publicamos artículos, organizamos talleres y participamos en conferencias para acercar la Web3 a estudiantes, desarrolladores y personas curiosas."
+        },
+        "community": {
+            "title": "Comunidad colaborativa",
+            "text": "Somos una red abierta que fomenta la participación, el aprendizaje colectivo y la creación de valor sin intermediarios."
+        },
+        "cta1": "Ver comunidad",
+        "cta2": "Cómo colaborar"
     },
     "events": {
         "title": "Próximos eventos",
@@ -56,24 +73,11 @@
         "notFound": "Artículo no encontrado.",
         "loading": "Cargando más artículos..."
     },
-    "about": {
-        "title": "Sobre webtres.uy",
-        "mission": "Impulsamos el conocimiento, la comunidad y la tecnología Web3 en Uruguay y América Latina.",
-        "description": "webtres.uy es un club sin fines de lucro donde se aprende, se construye y se comparte. Organizamos eventos, publicamos contenidos educativos y conectamos a personas interesadas en blockchain, Ethereum y tecnologías descentralizadas.",
-        "education": {
-            "title": "Educación abierta",
-            "text": "Publicamos artículos, organizamos talleres y participamos en conferencias para acercar la Web3 a estudiantes, desarrolladores y curiosos."
-        },
-        "community": {
-            "title": "Comunidad colaborativa",
-            "text": "Somos una red abierta que fomenta la participación, el aprendizaje colectivo y la creación de valor sin intermediarios."
-        }
-    },
     "faq": {
         "title": "Preguntas frecuentes",
         "q1": {
-            "q": "¿Qué es webtres.uy?",
-            "a": "Es un club sin fines de lucro dedicado a promover la Web3 en Uruguay y la región mediante eventos, educación y comunidad."
+            "q": "¿Qué es webtres?",
+            "a": "Es una organización sin fines de lucro dedicado a promover la Web3 en Uruguay y la región mediante eventos, educación y comunidad."
         },
         "q2": {
             "q": "¿Cómo puedo participar?",
@@ -81,35 +85,51 @@
         },
         "q3": {
             "q": "¿Necesito conocimientos técnicos para unirme?",
-            "a": "No. webtres.uy es para personas de todos los niveles, desde principiantes hasta expertos en blockchain y Ethereum."
+            "a": "No. webtres es para personas de todos los niveles, desde principiantes hasta expertos en Blockchain y DLTs."
         },
         "q4": {
             "q": "¿Dónde se realizan los encuentros?",
-            "a": "Principalmente en Montevideo y Atlántida, aunque también participamos en eventos en línea y en otras ciudades de la región."
+            "a": "Principalmente en Montevideo y Ciudad de La Costa, aunque también participamos en eventos en línea y en otras ciudades de la región."
         },
         "q5": {
             "q": "¿Tienen alguna red social o grupo de contacto?",
-            "a": "Sí. Estamos en Twitter, GitHub, y también podés escribirnos por correo electrónico a contacto@webtres.uy"
+            "a": "Sí. Estamos en TeInstagram, Twitter, LinkedIn, y también podés escribirnos por correo electrónico a contacto@webtres.uy"
         }
     },
     "community": {
         "title": "Unite a la comunidad",
-        "description": "Explorá, conectá y contribuí con Webtres.uy. Somos una red abierta para quienes creen en la Web3.",
-        "body1": "Nuestra comunidad está formada por personas apasionadas por Ethereum, blockchain y tecnologías descentralizadas. No importa si estás empezando o ya sos experto: siempre hay un lugar para vos.",
+        "description": "Explorá, conectá y contribuí con webtres. Somos una red abierta para quienes creen en la Web3.",
+        "body1.1": "Nuestra comunidad está integrada por personas apasionadas por blockchain y tecnologías descentralizadas.",
+        "body1.2": "No importa si estás empezando o ya sos experto: siempre hay un lugar para vos.",
         "body2": "Organizamos eventos presenciales y virtuales, compartimos recursos educativos, y colaboramos en proyectos de impacto para Uruguay y la región.",
-        "cta": "Ver comunidad"
+        "cta": "Quiero unirme",
+        "body3.title": "¿Quién puede sumarse?",
+        "body3.text1": "webtres es una comunidad abierta a todas las personas que sienten curiosidad, pasión o incluso una pequeña chispa de interés por la Web3 y las tecnologías descentralizadas. No importa si sabés programar, si venís del mundo del arte, la educación, la comunicación o simplemente querés entender mejor cómo funciona el universo cripto: siempre vas a encontrar un lugar donde participar, aprender y conectar con otras personas.",
+        "body3.text2": "Creemos en una comunidad diversa, donde los saberes se cruzan, se comparten y se potencian. Por eso, nuestra red está compuesta por personas con perfiles muy distintos, pero con un objetivo común: construir un ecosistema Web3 uruguayo que sea colaborativo, accesible e innovador.",
+        "body3.items": ["Desarrolladores y Programadores", "Diseñadores y Artistas","Estudiantes y Educadores", "Emprendedores y Empresarios", "Entusiastas de la tecnología", "Comunicadores y Divulgadores"],
+        "body4.title": "Espacios de la comunidad",
+        "body4.text1": "Nuestros espacios están pensados para que cualquier persona interesada pueda participar sin miedo ni barreras, ya sea de forma presencial o desde cualquier lugar del Uruguay (¡o del mundo!) a través de nuestros canales digitales.",
+        "body4.text2": "En webtres generamos espacios para compartir, aprender y construir comunidad. Espacios donde nadie es \"demasiado principiante\" ni \"demasiado experto\", y donde la tecnología se vive con cercanía.",
+        "body4.items": ["Meetups y eventos presenciales", "Charlas y talleres virtuales", "Proyectos colaborativos", "Canales de comunicación en línea"],
+        "body5.text1": "Creemos que las mejores ideas surgen cuando se encuentran personas con diferentes perspectivas.",
+        "body5.text2": "Así que diseñamos nuestros espacios para fomentar el intercambio abierto, el respeto mutuo y la creatividad colectiva.",
+        "body5.text3": "Desde una charla técnica hasta una ronda de stickers o una idea loca en una servilleta: todo tiene lugar si suma a la comunidad.",
+        "cta2": "Cómo colaborar",
+        "cta3": "Sobre nosotros"
   },
   "contribute": {
-        "title": "¿Querés colaborar?",
-        "description": "Hay muchas formas de sumar tu energía al crecimiento del ecosistema Web3 desde Uruguay.",
-        "points": {
-            "1": "Escribí artículos educativos o tutoriales técnicos.",
-            "2": "Organizá o ayudá en eventos, meetups o hackathons.",
-            "3": "Diseñá, programá o testeá herramientas del sitio web.",
-            "4": "Conectá con otros proyectos y comunidades Web3."
-        },
-        "footer": "Podés empezar con pequeñas acciones o proponer tus propias ideas. ¡Tu aporte siempre es valioso!",
-        "cta": "Cómo colaborar"
+        "title": "Cómo colaborar",
+        "text1": "Hay muchas formas de sumar tu energía al crecimiento del ecosistema Web3 en Uruguay.",
+        "text2.1": "No importa cuánto sepas ni cuánto tiempo tengas: en webtres creemos que todas las contribuciones cuentan.",
+        "text2.2": "Podés empezar con algo chiquito, sumarte a una actividad puntual, o traer tu propia propuesta.",
+        "subtitle": "Algunas ideas para empezar",
+        "points": ["Co-crear eventos y meetups.", "Participar en nuestros encuentros.", "Mejorar la experiencia del sitio.", "Programar ideas en código abierto.", "Compartir contenido de webtres.", "Diseñar elementos visuales.", "Escribir artículos o tutoriales.", "Conectarnos con otras comunidades.", "Proponer alianzas con comunidades.", "Compartir tu aprendizaje.", "Ayudar a entender mejor Web3.", "Hacer realidad una idea con webtres."],
+        "text3": "Podés empezar con pequeñas acciones o proponer algo más grande. Lo importante es que tu colaboración sea auténtica y con ganas. Acá no hay jefes ni estructuras cerradas: hay comunidad.",
+        "text4": "Si tenés una idea, un proyecto o simplemente querés sumarte a lo que ya estamos haciendo, ¡escribinos! Nos encantaría conocerte y ver cómo podemos colaborar juntos.",
+        "text5": "¡Tu aporte siempre es valioso!",
+        "cta": "Quiero colaborar",
+        "cta2": "Ver comunidad",
+        "cta3": "Sobre nosotros"
     },
     "notfound": {
         "message": "Lo sentimos, la página que buscás no existe.",
@@ -117,8 +137,10 @@
     },
     "footer": {
         "home": "Inicio",
-        "events": "Eventos",
         "blog": "Blog",
+        "faq": "Preguntas frecuentes",
+        "events": "Eventos",
+        "newsletter": "Newsletter",
         "contact": "Contacto"
     },
     "loading": "Cargando..."
