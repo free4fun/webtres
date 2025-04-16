@@ -54,7 +54,9 @@
         "cta2": "Cómo colaborar"
     },
     "events": {
-        "title": "Próximos eventos",
+        "title": "Eventos",
+        "text1": "Creemos que la comunidad se construye compartiendo tiempo, ideas y experiencias. Por eso, organizamos y difundimos eventos que promueven el encuentro entre personas interesadas en blockchain, cripto, DAOs, identidad digital y todas las tecnologías que forman parte del universo Web3.",
+        "text2": "En esta sección vas a encontrar tanto eventos organizados por webtres como también una selección de eventos destacados del ecosistema Web3, tanto en Uruguay como en la región y el mundo.",
         "backToList": "Volver a la lista de eventos",
         "notFound": "Evento no encontrado."
     },
@@ -68,7 +70,9 @@
         "success": "¡Mensaje enviado! Nos pondremos en contacto pronto."
     },
     "blog": {
-        "title": "Últimos artículos",
+        "title": "Blog",
+        "text1": "Este es un espacio abierto y accesible, donde compartimos ideas y experiencias sobre Web3.",
+        "text2": "Acá vas a encontrar desde guías prácticas para dar tus primeros pasos en blockchain y cripto, hasta análisis sobre DAOs, identidad digital, privacidad, contratos inteligentes, NFTs y más, mucho más. También compartimos tutoriales para quienes están aprendiendo a desarrollar en Web3, historias sobre proyectos que inspiran y coberturas de eventos que nos conectan como comunidad.",
         "backToList": "Volver al blog",
         "notFound": "Artículo no encontrado.",
         "loading": "Cargando más artículos..."

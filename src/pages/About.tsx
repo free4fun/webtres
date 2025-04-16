@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className="flex flex-col gap-12 py-12 bg-background text-foreground transition-colors duration-300">
       <section className="text-center space-y-6 px-4 max-w-4xl mx-auto">
-        <h2 className="text-3xl font-semibold">{t("about.title")}</h2>
+        <h2 className="text-3xl font-bold">{t("about.title")}</h2>
         <p className="text-lg text-muted-foreground">{t("about.mission")}</p>
         <p className="text-base">{t("about.description")}</p>
         <div className="grid gap-6 sm:grid-cols-2 mt-8 text-left">

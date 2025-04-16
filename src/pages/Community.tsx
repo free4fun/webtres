@@ -18,13 +18,13 @@ export const Community = () => {
   return (
     <div className="flex flex-col gap-12 py-12 bg-background text-foreground transition-colors duration-300">
       <section className="text-center space-y-6 px-4 max-w-4xl mx-auto">
-        <h2 className="text-3xl font-semibold">{t("community.title")}</h2>
+        <h2 className="text-3xl font-bold">{t("community.title")}</h2>
         <p className="text-muted-foreground text-lg">{t("community.description")}</p>
       </section>
       <section className="bg-muted/40 py-12 text-center px-4">
         <p className="text-base leading-relaxed">{t("community.body1.1")}<br/>{t("community.body1.2")}</p>
         <p className="text-base leading-relaxed py-7">{t("community.body2")}</p>
-        <p><Link to="/about"><Button>{t("community.cta")}</Button></Link></p>
+        <p><Link to="https://t.me/webtres_uy" target="_blank"><Button>{t("community.cta")}</Button></Link></p>
       </section>
       <section className="text-center space-y-6 px-4 max-w-4xl mx-auto">
         <h3 className="text-2xl font-semibold">{t("community.body3.title")}</h3>
@@ -42,7 +42,7 @@ export const Community = () => {
         <p className="text-base leading-relaxed">{t("community.body5.text1")}<br/>{t("community.body5.text2")}</p>
         <p className="text-base leading-relaxed  py-7">{t("community.body5.text3")}</p>
         <div className="flex flex-wrap justify-center gap-4">
-          <Link to="/about"><Button variant="secondary">{t("community.cta2")}</Button></Link>
+          <Link to="/contribute"><Button variant="secondary">{t("community.cta2")}</Button></Link>
           <Link to="/about"><Button variant="secondary">{t("community.cta3")}</Button></Link>
         </div>
       </section>

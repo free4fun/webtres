@@ -19,7 +19,7 @@ const Home = () => {
         <img src="/images/webtres.png" alt="Webtres logo" className="w-24 h-24 sm:w-80 sm:h-80 mx-auto" />
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">{t("home.hero.title")}</h1>
         <p className="text-muted-foreground text-lg">{t("home.hero.description")}</p>
-        <Link to="https://t.me/webtres_uy"><Button size="lg">{t("home.hero.cta")}</Button></Link>
+        <Link to="https://t.me/webtres_uy" target="_blank"><Button size="lg">{t("home.hero.cta")}</Button></Link>
       </section>
 
       {/* About Section */}

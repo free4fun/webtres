@@ -17,12 +17,12 @@ export const Footer = () => {
           <p>© {new Date().getFullYear()} webtres.uy</p>
         </div>
         <div className="flex gap-4">
-          <a href="https://telegram.org" target="_blank" rel="noreferrer"><SiTelegram className="w-5 h-5 hover:text-foreground" /></a>
-          <a href="https://instagram.com/" target="_blank" rel="noreferrer"><SiInstagram className="w-5 h-5 hover:text-foreground" /></a>
-          <a href="https://x.com/" target="_blank" rel="noreferrer"><SiX className="w-5 h-5 hover:text-foreground" /></a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer"><SiLinkedin className="w-5 h-5 hover:text-foreground" /></a>
-          <a href="https://youtube.com" target="_blank" rel="noreferrer"><SiYoutube className="w-5 h-5 hover:text-foreground" /></a>
-          <a href="https://github.com" target="_blank" rel="noreferrer"><SiGithub className="w-5 h-5 hover:text-foreground" /></a>
+          <Link to="https://t.me/webtres_uy" target="_blank"><SiTelegram className="w-5 h-5 hover:text-foreground" /></Link>
+          <Link to="https://instagram.com/" target="_blank"><SiInstagram className="w-5 h-5 hover:text-foreground" /></Link>
+          <Link to="https://x.com/" target="_blank"><SiX className="w-5 h-5 hover:text-foreground" /></Link>
+          <Link to="https://linkedin.com" target="_blank"><SiLinkedin className="w-5 h-5 hover:text-foreground" /></Link>
+          <Link to="https://youtube.com" target="_blank"><SiYoutube className="w-5 h-5 hover:text-foreground" /></Link>
+          <Link to="https://github.com" target="_blank"><SiGithub className="w-5 h-5 hover:text-foreground" /></Link>
         </div>
       </div>
     </footer>

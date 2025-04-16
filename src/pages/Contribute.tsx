@@ -14,12 +14,12 @@ export const Contribute = () => {
   return (
     <div className="flex flex-col gap-12 py-12 bg-background text-foreground transition-colors duration-300">
       <section className="text-center space-y-6 px-4 max-w-4xl mx-auto">
-        <h2 className="text-3xl font-semibold">{t("contribute.title")}</h2>
+        <h2 className="text-3xl font-bold">{t("contribute.title")}</h2>
         <p className="text-muted-foreground text-lg">{t("contribute.text1")}</p>
       </section>
       <section className="bg-muted/40 py-12 text-center px-4">
         <p className="text-base leading-relaxed py-7">{t("contribute.text2.1")}<br/><br/>{t("contribute.text2.2")}</p>
-        <p><Link to="/about"><Button>{t("contribute.cta")}</Button></Link></p>
+        <p><Link to="https://t.me/webtres_uy"><Button>{t("contribute.cta")}</Button></Link></p>
       </section>
       <section className="text-center space-y-6 px-4 max-w-4xl mx-auto">
         <h3 className="text-2xl font-semibold">{t("contribute.subtitle")}</h3>
@@ -35,7 +35,7 @@ export const Contribute = () => {
         <p className="text-base leading-relaxed">{t("contribute.text3")}<br/>{t("contribute.text4")}</p>
         <p className="text-base leading-relaxed py-7">{t("contribute.text5")}</p>
         <div className="flex flex-wrap justify-center gap-4">
-          <Link to="/about"><Button variant="secondary">{t("contribute.cta2")}</Button></Link>
+          <Link to="/community"><Button variant="secondary">{t("contribute.cta2")}</Button></Link>
           <Link to="/about"><Button variant="secondary">{t("contribute.cta3")}</Button></Link>
         </div>
       </section>
