@@ -7,6 +7,19 @@
         "events": "Eventos",
         "contact": "Contacto"
     },
+    "notfound": {
+        "message": "Lo sentimos, la página que buscás no existe.",
+        "backHome": "Volver al inicio"
+    },
+    "footer": {
+        "home": "Inicio",
+        "blog": "Blog",
+        "faq": "Preguntas",
+        "events": "Eventos",
+        "newsletter": "Newsletter",
+        "contact": "Contacto"
+    },
+    "loading": "Cargando...",
     "home": {
         "hero": {
             "title": "Web3 en Uruguay comienza acá.",
@@ -41,14 +54,32 @@
     "about": {
         "title": "Sobre webtres",
         "mission": "Impulsamos el conocimiento, la comunidad y la tecnología Web3 en Uruguay y América Latina.",
-        "description": "webtres es una organización sin fines de lucro donde se aprende, se construye y se comparte. Organizamos eventos, publicamos contenidos educativos y conectamos a personas interesadas en Blockchain, Web3 y tecnologías descentralizadas.",
+        "text1": "webtres es una organización sin fines de lucro donde se aprende, se construye y se comparte. Organizamos eventos, publicamos contenidos educativos y conectamos a personas interesadas en Blockchain, Web3 y tecnologías descentralizadas.",
+        "text2": "Nacimos con la intención de abrir caminos, tender puentes y encender conversaciones sobre el futuro de internet. Creemos que la Web3 no es solo una tecnología, sino una oportunidad para repensar cómo nos organizamos, cómo compartimos valor y cómo construimos redes más abiertas, humanas y soberanas.",
+        "text3": "Nos esforzamos para que más personas puedan comprender y participar de este nuevo paradigma. Para eso, nos enfocamos en estos pilares fundamentales:",
         "education": {
             "title": "Educación abierta",
-            "text": "Publicamos artículos, organizamos talleres y participamos en conferencias para acercar la Web3 a estudiantes, desarrolladores y personas curiosas."
+            "text": "Publicamos artículos, organizamos talleres y participamos en conferencias para acercar la Web3 a estudiantes, desarrolladores, artistas, comunicadores y cualquier persona curiosa. Nuestro contenido es libre, accesible y en español, porque creemos que el conocimiento descentralizado también debe ser comprensible."
         },
         "community": {
             "title": "Comunidad colaborativa",
-            "text": "Somos una red abierta que fomenta la participación, el aprendizaje colectivo y la creación de valor sin intermediarios."
+            "text": "Somos una red abierta que fomenta la participación, el aprendizaje colectivo y la creación de valor sin intermediarios. Nos reunimos, compartimos, nos ayudamos y construimos juntos. Cada persona que se suma aporta algo único, y eso es lo que hace fuerte a nuestra comunidad."
+        },
+        "purpose": {
+            "title": "Construcción con propósito",
+            "text": "No solo hablamos de descentralización: también la practicamos. Participamos en proyectos colaborativos, DAOs, hackathons y herramientas que tengan un impacto real en nuestras comunidades. Queremos que webtres sea un nodo que irradie conocimiento y acción."
+        },
+        "conection": {
+            "title": "Conexión local y global",
+            "text": "webtres nace en Uruguay, pero se proyecta hacia América Latina y el mundo. Participamos en redes regionales e internacionales, colaboramos con otras comunidades y compartimos aprendizajes desde el sur. Queremos que las voces latinoamericanas tengan un rol activo en la conversación global sobre tecnologías descentralizadas."
+        },
+        "curiosity": {
+            "title": "Curiosidad radical",
+            "text": "Nos mueve la pregunta, no la respuesta. Fomentamos la exploración constante, la experimentación y el pensamiento crítico. No importa si estás empezando o si llevás años en el ecosistema: lo importante es mantener la mente abierta y las ganas de aprender en comunidad."
+        },
+        "comunication": {
+            "title": "Comunicación accesible",
+            "text": "Traducimos ideas complejas en lenguaje claro, en español, con ejemplos concretos y formatos diversos. Porque creemos que entender la Web3 no debería ser un privilegio técnico, sino un derecho cultural. Comunicar bien es un acto de inclusión."
         },
         "cta1": "Ver comunidad",
         "cta2": "Cómo colaborar"
@@ -59,15 +90,6 @@
         "text2": "En esta sección vas a encontrar tanto eventos organizados por webtres como también una selección de eventos destacados del ecosistema Web3, tanto en Uruguay como en la región y el mundo.",
         "backToList": "Volver a la lista de eventos",
         "notFound": "Evento no encontrado."
-    },
-    "contact": {
-        "title": "Contacto",
-        "description": "¿Tenés preguntas, ideas o querés colaborar con webtres.uy? Escribinos.",
-        "name": "Tu nombre",
-        "email": "Correo electrónico",
-        "message": "Mensaje",
-        "submit": "Enviar",
-        "success": "¡Mensaje enviado! Nos pondremos en contacto pronto."
     },
     "blog": {
         "title": "Blog",
@@ -96,8 +118,32 @@
             "a": "Principalmente en Montevideo y Ciudad de La Costa, aunque también participamos en eventos en línea y en otras ciudades de la región."
         },
         "q5": {
-            "q": "¿Tienen alguna red social o grupo de contacto?",
-            "a": "Sí. Estamos en TeInstagram, Twitter, LinkedIn, y también podés escribirnos por correo electrónico a contacto@webtres.uy"
+            "q": "¿Hay que pagar para participar en webtres?",
+            "a": "No. Todas nuestras actividades son gratuitas o con contribución voluntaria. Creemos en el acceso libre al conocimiento y la comunidad."
+        },
+        "q6": {
+            "q": "¿Puedo proponer un evento o taller?",
+            "a": "¡Sí! Si tenés una idea, podés presentarla y te ayudamos a organizarla. Queremos que la comunidad sea cocreadora de los espacios."
+        },
+        "q7": {
+            "q": "¿Puedo colaborar sin asistir a eventos presenciales?",
+            "a": "Claro. Podés participar desde cualquier lugar aportando ideas, escribiendo artículos, ayudando con el sitio o sumándote a proyectos online."
+        },
+        "q8": {
+            "q": "¿Tienen relación con alguna empresa o partido político?",
+            "a": "No. Somos independientes, horizontales y sin fines de lucro. Nuestra única agenda es construir comunidad y promover tecnologías descentralizadas."
+        },
+        "q9": {
+            "q": "¿Qué tecnologías se trabajan en webtres?",
+            "a": "Principalmente blockchains, criptomonedas, contratos inteligentes, DAOs, identidad digital, privacidad, NFTs y nuevas formas de organización descentralizada."
+        },
+        "q10": {
+            "q": "¿Puedo aprender a programar en Web3 con ustedes?",
+            "a": "Sí. Organizamos talleres introductorios y avanzados, y compartimos recursos para que puedas empezar a desarrollar en Web3 desde cero."
+        },
+        "q11": {
+            "q": "¿Cómo puedo mantenerme informado de las novedades?",
+            "a": "Podés seguirnos en redes, sumarte a nuestros canales de comunicación o suscribirte a la newsletter mensual donde compartimos eventos, noticias y recursos."
         }
     },
     "community": {
@@ -135,17 +181,23 @@
         "cta2": "Ver comunidad",
         "cta3": "Sobre nosotros"
     },
-    "notfound": {
-        "message": "Lo sentimos, la página que buscás no existe.",
-        "backHome": "Volver al inicio"
+    "newsletter": {
+        "title": "Suscribite a la newsletter de webtres",
+        "description": "Recibí una vez al mes lo más importante del ecosistema Web3 en Uruguay, Latinoamérica y el mundo. Compartimos eventos, artículos, recursos educativos, oportunidades de colaboración y reflexiones que inspiran.",
+        "extendedDescription": "Nuestra newsletter es un boletín mensual donde seleccionamos lo más relevante del mundo descentralizado, con foco en Uruguay y América Latina. Vas a encontrar resúmenes de eventos, artículos destacados en español, oportunidades para sumarte a proyectos y contenido educativo claro y útil. Sin spam, sin ruido. Solo conocimiento curado, directo a tu bandeja de entrada.",
+        "placeholder": "Tu correo electrónico",
+        "subscribe": "Suscribirme",
+        "success": "¡Gracias por suscribirte! Te llegará nuestro próximo boletín mensual.",
+        "error": "Hubo un problema al suscribirte. Por favor, intentá de nuevo más tarde."
     },
-    "footer": {
-        "home": "Inicio",
-        "blog": "Blog",
-        "faq": "Preguntas frecuentes",
-        "events": "Eventos",
-        "newsletter": "Newsletter",
-        "contact": "Contacto"
-    },
-    "loading": "Cargando..."
+    "contact": {
+        "title": "Contacto",
+        "description": "¿Tenés preguntas, ideas o querés colaborar con webtres? Escribinos.",
+        "name": "Tu nombre",
+        "email": "Correo electrónico",
+        "message": "Mensaje",
+        "submit": "Enviar",
+        "success": "¡Mensaje enviado! Nos pondremos en contacto pronto.",
+        "error": "Hubo un problema al enviar tu mensaje. Por favor, intentá de nuevo más tarde."
+    }
 }   

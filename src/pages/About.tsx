@@ -9,7 +9,20 @@ const About = () => {
       <section className="text-center space-y-6 px-4 max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold">{t("about.title")}</h2>
         <p className="text-lg text-muted-foreground">{t("about.mission")}</p>
-        <p className="text-base">{t("about.description")}</p>
+        <p className="text-base">{t("about.text1")}</p>
+      </section>
+      <section className="bg-muted/40 py-16 px-4 text-center">
+        <div className="max-w-4xl mx-auto space-y-6">
+          <h2 className="text-2xl font-semibold">{t("home.community.title")}</h2>
+          <p className="text-muted-foreground">{t("home.community.description")}</p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link to="/community"><Button variant="secondary">{t("about.cta1")}</Button></Link>
+            <Link to="/contribute"><Button variant="secondary">{t("about.cta2")}</Button></Link>
+          </div>
+        </div>
+      </section>
+      <section className="text-center space-y-6 px-4 max-w-4xl mx-auto">
+        <p className="text-lg text-muted-foreground">{t("about.text3")}</p>
         <div className="grid gap-6 sm:grid-cols-2 mt-8 text-left">
           <div className="space-y-2">
             <h2 className="text-xl font-semibold">{t("about.education.title")}</h2>
@@ -20,14 +33,24 @@ const About = () => {
             <p className="text-muted-foreground">{t("about.community.text")}</p>
           </div>
         </div>
-      </section>
-      <section className="bg-muted/40 py-16 px-4 text-center">
-        <div className="max-w-4xl mx-auto space-y-6">
-          <h2 className="text-2xl font-semibold">{t("home.community.title")}</h2>
-          <p className="text-muted-foreground">{t("home.community.description")}</p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/community"><Button variant="secondary">{t("about.cta1")}</Button></Link>
-            <Link to="/contribute"><Button variant="secondary">{t("about.cta2")}</Button></Link>
+        <div className="grid gap-6 sm:grid-cols-2 mt-8 text-left">
+          <div className="space-y-2">
+            <h2 className="text-xl font-semibold">{t("about.purpose.title")}</h2>
+            <p className="text-muted-foreground">{t("about.purpose.text")}</p>
+          </div>
+          <div className="space-y-2">
+            <h2 className="text-xl font-semibold">{t("about.conection.title")}</h2>
+            <p className="text-muted-foreground">{t("about.conection.text")}</p>
+          </div>
+        </div>
+        <div className="grid gap-6 sm:grid-cols-2 mt-8 text-left">
+          <div className="space-y-2">
+            <h2 className="text-xl font-semibold">{t("about.curiosity.title")}</h2>
+            <p className="text-muted-foreground">{t("about.curiosity.text")}</p>
+          </div>
+          <div className="space-y-2">
+            <h2 className="text-xl font-semibold">{t("about.comunication.title")}</h2>
+            <p className="text-muted-foreground">{t("about.comunication.text")}</p>
           </div>
         </div>
       </section>

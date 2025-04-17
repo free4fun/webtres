@@ -12,9 +12,10 @@ export const Footer = () => {
           <div className="flex justify-center md:justify-start gap-4">
             <Link to="/blog">{t("footer.blog")}</Link>
             <Link to="/faq">{t("footer.faq")}</Link>
+            <Link to="/newsletter">{t("footer.newsletter")}</Link>
             <Link to="/contact">{t("footer.contact")}</Link>
           </div>
-          <p>© {new Date().getFullYear()} webtres.uy</p>
+          <p>© {new Date().getFullYear()} webtres</p>
         </div>
         <div className="flex gap-4">
           <Link to="https://t.me/webtres_uy" target="_blank"><SiTelegram className="w-5 h-5 hover:text-foreground" /></Link>

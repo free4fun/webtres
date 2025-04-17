@@ -17,6 +17,7 @@ function App() {
   const Events = lazy(() => import("@/pages/Events"))
   const EventDetail = lazy(() => import("@/pages/EventDetail"))
   const FAQ = lazy(() => import("@/pages/FAQ"))
+  const Newsletter = lazy(() => import("@/pages/Newsletter"))
   const Contact = lazy(() => import("@/pages/Contact"))
   
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/events" element={<Suspense fallback={<Loading/>}><Events/></Suspense>}/>
           <Route path="/events/:slug" element={<Suspense fallback={<Loading/>}><EventDetail/></Suspense>}/>
           <Route path="/faq" element={<Suspense fallback={<Loading/>}><FAQ/></Suspense>}/>
+          <Route path="/newsletter" element={<Suspense fallback={<Loading/>}><Newsletter/></Suspense>}/>
           <Route path="/contact" element={<Suspense fallback={<Loading/>}><Contact/></Suspense>}/>
           <Route path="*" element={<NotFound/>} />
         </Route>
