@@ -1,42 +1,228 @@
 {
-    "home": {
-        "hero": {
-            "title": "Web3 en Uruguay comienza acá.",
-            "description": "Unite a una comunidad descentralizada que construye el futuro del web a través de eventos, educación y colaboración.",
-            "cta": "Unirse al Club"
-        },
-        "about": {
-            "title": "Sobre Webtres.uy",
-            "text": "Somos una comunidad sin fines de lucro que promueve tecnologías abiertas como Ethereum y blockchain en Uruguay y la región."
-        },
-        "events": {
-            "title": "Próximos eventos",
-            "cta": "Ver todos",
-            "card": {
-                "title": "Evento #{{number}}",
-                "details": "27 de abril · Montevideo · Charlas + Pizza"
-            }
-        },
-        "blog": {
-            "title": "Últimos artículos",
-            "cta": "Ir al Blog",
-            "card": {
-                "title": "Entendiendo Web3 #{{number}}",
-                "summary": "Un resumen corto de qué es Web3 y por qué importa."
-            }
-        },
-        "cta": {
-            "title": "Involucrate",
-            "description": "¿Querés colaborar, venir a meetups o escribir? ¡Queremos saber de vos!",
-            "button": "Contactanos"
-        }
+  "nav": {
+    "home": "Home",
+    "about": "About us",
+    "community": "Community",
+    "contribute": "Contribute",
+    "events": "Events",
+    "contact": "Contact"
+  },
+  "notfound": {
+    "message": "Sorry, the page you're looking for doesn't exist.",
+    "backHome": "Back to home"
+  },
+  "footer": {
+    "home": "Home",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "events": "Events",
+    "newsletter": "Newsletter",
+    "contact": "Contact"
+  },
+  "loading": "Loading...",
+  "newsletter": {
+    "title": "Subscribe to the webtres newsletter",
+    "description": "Receive the most important Web3 updates from Uruguay, Latin America and the world once a month. We share events, articles, educational resources, collaboration opportunities, and inspiring ideas.",
+    "extendedDescription": "Our newsletter is a monthly digest featuring the most relevant updates from the decentralized world, with a focus on Uruguay and Latin America. You'll find event summaries, standout articles in Spanish, opportunities to join projects, and clear, useful educational content. No spam, no noise—just curated knowledge straight to your inbox.",
+    "placeholder": "Your email address",
+    "subscribe": "Subscribe",
+    "success": "Thanks for subscribing! You'll receive our next monthly newsletter.",
+    "error": "There was a problem subscribing. Please try again later."
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Got questions, ideas, or want to collaborate with webtres? Write to us.",
+    "name": "Your name",
+    "email": "Email address",
+    "message": "Message",
+    "submit": "Send",
+    "success": "Message sent! We'll be in touch soon.",
+    "error": "There was a problem sending your message. Please try again later."
+  },
+  "home": {
+    "hero": {
+      "title": "Web3 in Uruguay starts here.",
+      "description": "Join a decentralized community building the future of the web through events, education, and collaboration.",
+      "cta": "I want to join"
     },
-    "nav": {
-        "home": "Start",
-        "blog": "Blog",
-        "about": "About",
-        "events": "Events",
-        "contact": "Contact"
+    "about": {
+      "title": "About us",
+      "text": "We are a nonprofit organization that promotes Blockchain, Web3, and DLT technologies in Uruguay. We focus on open education, collaborative community, and creating spaces where anyone can learn, share, and build.",
+      "button": "Learn more"
     },
-    "join_now": "Join now"
+    "events": {
+      "title": "Upcoming events",
+      "cta": "See all"
+    },
+    "blog": {
+      "title": "Latest articles",
+      "cta": "Go to Blog"
+    },
+    "community": {
+      "title": "Join the community",
+      "description": "Explore, connect, and contribute with webtres. You can write, organize events, or simply take part.",
+      "community": "See community",
+      "contribute": "How to contribute"
+    },
+    "cta": {
+      "title": "Get involved",
+      "description": "Want to collaborate, join meetups, or write? We’d love to hear from you!",
+      "button": "Contact us"
+    }
+  },
+  "about": {
+    "title": "About webtres",
+    "mission": "We promote knowledge, community, and Web3 technology in Uruguay and Latin America.",
+    "text1": "webtres is a nonprofit organization where people learn, build, and share. We organize events, publish educational content, and connect people interested in Blockchain, Web3, and decentralized technologies.",
+    "text2": "We were born to open paths, build bridges, and spark conversations about the future of the internet. We believe Web3 is not just a technology but an opportunity to rethink how we organize, share value, and create more open, human, and sovereign networks.",
+    "text3": "We work so that more people can understand and participate in this new paradigm. To achieve that, we focus on these core pillars:",
+    "education": {
+      "title": "Open education",
+      "text": "We publish articles, host workshops, and participate in conferences to make Web3 more accessible to students, developers, artists, communicators, and curious minds. Our content is free, accessible, and in Spanish—because decentralized knowledge should also be understandable."
+    },
+    "community": {
+      "title": "Collaborative community",
+      "text": "We are an open network that encourages participation, collective learning, and value creation without intermediaries. We meet, share, support each other, and build together. Every person brings something unique—that’s our strength."
+    },
+    "purpose": {
+      "title": "Purpose-driven building",
+      "text": "We don’t just talk about decentralization—we practice it. We take part in collaborative projects, DAOs, hackathons, and tools that make a real impact in our communities. We want webtres to be a node that radiates knowledge and action."
+    },
+    "conection": {
+      "title": "Local and global connection",
+      "text": "webtres was born in Uruguay but projects itself to Latin America and the world. We join regional and international networks, collaborate with other communities, and share knowledge from the South. We want Latin American voices to have an active role in the global Web3 conversation."
+    },
+    "curiosity": {
+      "title": "Radical curiosity",
+      "text": "We are driven by questions, not answers. We promote constant exploration, experimentation, and critical thinking. Whether you're just starting or have years of experience, the key is to stay curious and keep learning together."
+    },
+    "comunication": {
+      "title": "Accessible communication",
+      "text": "We translate complex ideas into clear language, in Spanish, with real examples and diverse formats. Understanding Web3 shouldn’t be a technical privilege—it’s a cultural right. Communicating well is an act of inclusion."
+    },
+    "cta1": "See community",
+    "cta2": "How to contribute"
+  },
+  "events": {
+    "title": "Events",
+    "text1": "We believe community is built by sharing time, ideas, and experiences. That’s why we organize and share events that bring together people interested in blockchain, crypto, DAOs, digital identity, and all things Web3.",
+    "text2": "In this section you’ll find both events organized by webtres and a curated selection of featured Web3 ecosystem events, from Uruguay and around the world.",
+    "backToList": "Back to events list",
+    "notFound": "Event not found."
+  },
+  "blog": {
+    "title": "Blog",
+    "text1": "This is an open and accessible space where we share ideas and experiences around Web3.",
+    "text2": "Here you’ll find everything from practical guides for getting started with blockchain and crypto, to analysis on DAOs, digital identity, privacy, smart contracts, NFTs, and much more. We also share tutorials for Web3 developers, stories about inspiring projects, and coverage of events that connect our community.",
+    "backToList": "Back to blog",
+    "notFound": "Article not found.",
+    "loading": "Loading more articles..."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "q": "What is webtres?",
+      "a": "It’s a nonprofit organization promoting Web3 in Uruguay and the region through events, education, and community."
+    },
+    "q2": {
+      "q": "How can I participate?",
+      "a": "You can join events, write articles, organize talks, or collaborate on projects. Everyone is welcome!"
+    },
+    "q3": {
+      "q": "Do I need technical knowledge to join?",
+      "a": "No. webtres is for everyone—from complete beginners to blockchain and DLT experts."
+    },
+    "q4": {
+      "q": "Where do events take place?",
+      "a": "Mainly in Montevideo and Ciudad de la Costa, but we also take part in online events and meetups across the region."
+    },
+    "q5": {
+      "q": "Is there a fee to participate?",
+      "a": "No. All of our activities are free or donation-based. We believe in open access to knowledge and community."
+    },
+    "q6": {
+      "q": "Can I propose an event or workshop?",
+      "a": "Yes! If you have an idea, share it—we’ll help you bring it to life. We want the community to co-create the spaces."
+    },
+    "q7": {
+      "q": "Can I contribute without attending in person?",
+      "a": "Of course. You can contribute from anywhere by writing, helping with the website, or joining online projects."
+    },
+    "q8": {
+      "q": "Are you linked to any business or political group?",
+      "a": "No. We’re independent, horizontal, and nonprofit. Our only agenda is to build community and promote decentralized technologies."
+    },
+    "q9": {
+      "q": "What technologies are covered in webtres?",
+      "a": "Mainly blockchains, cryptocurrencies, smart contracts, DAOs, digital identity, privacy, NFTs, and new decentralized systems."
+    },
+    "q10": {
+      "q": "Can I learn to code for Web3 with you?",
+      "a": "Yes. We offer beginner and advanced workshops, and we share resources to help you start building in Web3."
+    },
+    "q11": {
+      "q": "How can I stay up to date?",
+      "a": "Follow us on social media, join our channels, or subscribe to the newsletter for events, news, and learning resources."
+    }
+  },
+  "community": {
+    "title": "Join the community",
+    "description": "Explore, connect, and contribute with webtres. We’re an open network for everyone who believes in Web3.",
+    "body1.1": "Our community is made up of people passionate about blockchain and decentralized technologies.",
+    "body1.2": "It doesn’t matter if you’re just starting or already experienced—there’s always a place for you.",
+    "body2": "We host in-person and online events, share educational resources, and collaborate on impactful projects for Uruguay and the region.",
+    "cta": "I want to join",
+    "body3.title": "Who can join?",
+    "body3.text1": "webtres is an open community for anyone with curiosity, passion, or even a spark of interest in Web3 and decentralized technologies. Whether you’re a coder, an artist, an educator, a communicator, or simply want to better understand crypto—there’s a space for you to participate, learn, and connect.",
+    "body3.text2": "We believe in a diverse community where different kinds of knowledge come together, amplify each other, and create something greater. That’s why our network includes people from many backgrounds, all united by the same goal: to build a collaborative, accessible, and innovative Web3 ecosystem in Uruguay.",
+    "body3.items": [
+      "Developers and Programmers",
+      "Designers and Artists",
+      "Students and Educators",
+      "Entrepreneurs and Business Owners",
+      "Tech Enthusiasts",
+      "Communicators and Educators"
+    ],
+    "body4.title": "Community spaces",
+    "body4.text1": "Our spaces are designed for anyone interested to join without fear or barriers—either in person or from anywhere in Uruguay (or the world!) through our digital channels.",
+    "body4.text2": "At webtres we create spaces to share, learn, and build community. Places where no one is “too new” or “too expert,” and where tech is experienced in a friendly, hands-on way.",
+    "body4.items": [
+      "In-person meetups and events",
+      "Virtual talks and workshops",
+      "Collaborative projects",
+      "Online communication channels"
+    ],
+    "body5.text1": "We believe the best ideas come when people with different perspectives connect.",
+    "body5.text2": "So we design our spaces to encourage open exchange, mutual respect, and creative collaboration.",
+    "body5.text3": "From a technical talk to a sticker jam or a wild idea scribbled on a napkin—everything belongs if it adds to the community.",
+    "cta2": "How to contribute",
+    "cta3": "About us"
+  },
+  "contribute": {
+    "title": "How to contribute",
+    "text1": "There are many ways to bring your energy to growing the Web3 ecosystem in Uruguay.",
+    "text2.1": "No matter how much you know or how much time you have—at webtres, every contribution counts.",
+    "text2.2": "You can start small, join a one-off activity, or bring your own proposal.",
+    "subtitle": "Here are some ideas to get started",
+    "points": [
+      "Co-create events and meetups.",
+      "Take part in our gatherings.",
+      "Improve the site’s user experience.",
+      "Build open-source code ideas.",
+      "Share webtres content.",
+      "Design visual assets.",
+      "Write articles or tutorials.",
+      "Connect us with other communities.",
+      "Propose partnerships with other groups.",
+      "Share what you’re learning.",
+      "Help others understand Web3.",
+      "Make your idea happen with webtres."
+    ],
+    "text3": "You can start with small actions or suggest something bigger. What matters is that your contribution is authentic and enthusiastic. There are no bosses or fixed hierarchies here—just community.",
+    "text4": "If you have an idea, a project, or just want to join in on what we’re doing, write to us! We’d love to hear from you and find a way to collaborate.",
+    "text5": "Your contribution is always valuable!",
+    "cta": "I want to contribute",
+    "cta2": "See community",
+    "cta3": "About us"
+  }
 }
