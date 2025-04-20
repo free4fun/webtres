@@ -11,14 +11,10 @@ interface EventCardProps {
   image?: string
 }
 
-/**
- * EventCard.tsx
- * Reusable event preview card with image and details.
- */
 export const EventCard = ({ slug, title, date, location, description, image }: EventCardProps) => {
   return (
     <Link to={`/events/${slug}`} key={slug}>
-    <Card className="pt-0 pb-6 bg-card text-card-foreground overflow-hidden">
+    <Card className="pt-0 pb-6 bg-card text-card-foreground overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-md">
       {image && (
         <div className="aspect-[3/2] overflow-hidden">
           <img

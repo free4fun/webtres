@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion"
+import { AnimatedSection } from "@/components/Animations"
 
 /**
  * FAQ.tsx
@@ -29,17 +30,17 @@ const FAQ = () => {
 
   return (
     <div className="w-full px-4 sm:px-6 lg:px-8 py-12 bg-background text-foreground">
-      <div className="max-w-3xl mx-auto space-y-6">
+      <AnimatedSection className="max-w-3xl mx-auto space-y-6" vertical={-40}>
         <h1 className="text-3xl font-bold tracking-tight text-center">{t("faq.title")}</h1>
         <Accordion type="multiple" className="w-full">
           {questions.map((item) => (
-            <AccordionItem key={item.id} value={item.id}>
-              <AccordionTrigger>{item.question}</AccordionTrigger>
+            <AccordionItem key={item.id} value={item.id} className="no-underline">
+              <AccordionTrigger className="hover:no-underline hover:text-primary transition-colors duration-200 cursor-pointer">{item.question}</AccordionTrigger>
               <AccordionContent>{item.answer}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
-      </div>
+        </AnimatedSection>
     </div>
   )
 }

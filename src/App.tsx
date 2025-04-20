@@ -1,12 +1,10 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Suspense, lazy } from "react";
-import Layout from "./Layout";
-import Loading from "@/components/Loading";
-import NotFound from "@/pages/NotFound";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Suspense, lazy } from "react"
+import Layout from "./Layout"
+import Loading from "@/components/Loading"
+import ScrollToTop from "@/components/ScrollToTop"
+import NotFound from "@/pages/NotFound"
 
-/**
- * Main App entrypoint with routing.
- */
 function App() {
   const Home = lazy(() => import("@/pages/Home"))
   const About = lazy(() => import("@/pages/About"))
@@ -19,27 +17,28 @@ function App() {
   const FAQ = lazy(() => import("@/pages/FAQ"))
   const Newsletter = lazy(() => import("@/pages/Newsletter"))
   const Contact = lazy(() => import("@/pages/Contact"))
-  
+
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
-        <Route element={<Layout/>}>
-          <Route path="/" element={<Suspense fallback={<Loading/>}><Home/></Suspense>}/>
-          <Route path="/about" element={<Suspense fallback={<Loading/>}><About/></Suspense>}/>
-          <Route path="/community" element={<Suspense fallback={<Loading/>}><Community/></Suspense>}/>
-          <Route path="/contribute" element={<Suspense fallback={<Loading/>}><Contribute/></Suspense>}/>          
-          <Route path="/blog" element={<Suspense fallback={<Loading/>}><Blog/></Suspense>}/>
-          <Route path="/blog/:slug" element={<Suspense fallback={<Loading/>}><Article/></Suspense>}/>
-          <Route path="/events" element={<Suspense fallback={<Loading/>}><Events/></Suspense>}/>
-          <Route path="/events/:slug" element={<Suspense fallback={<Loading/>}><EventDetail/></Suspense>}/>
-          <Route path="/faq" element={<Suspense fallback={<Loading/>}><FAQ/></Suspense>}/>
-          <Route path="/newsletter" element={<Suspense fallback={<Loading/>}><Newsletter/></Suspense>}/>
-          <Route path="/contact" element={<Suspense fallback={<Loading/>}><Contact/></Suspense>}/>
-          <Route path="*" element={<NotFound/>} />
+        <Route element={<Layout />}>
+          <Route path="/" element={<Suspense fallback={<Loading />}><Home /></Suspense>} />
+          <Route path="/about" element={<Suspense fallback={<Loading />}><About /></Suspense>} />
+          <Route path="/community" element={<Suspense fallback={<Loading />}><Community /></Suspense>} />
+          <Route path="/contribute" element={<Suspense fallback={<Loading />}><Contribute /></Suspense>} />
+          <Route path="/blog" element={<Suspense fallback={<Loading />}><Blog /></Suspense>} />
+          <Route path="/blog/:slug" element={<Suspense fallback={<Loading />}><Article /></Suspense>} />
+          <Route path="/events" element={<Suspense fallback={<Loading />}><Events /></Suspense>} />
+          <Route path="/events/:slug" element={<Suspense fallback={<Loading />}><EventDetail /></Suspense>} />
+          <Route path="/faq" element={<Suspense fallback={<Loading />}><FAQ /></Suspense>} />
+          <Route path="/newsletter" element={<Suspense fallback={<Loading />}><Newsletter /></Suspense>} />
+          <Route path="/contact" element={<Suspense fallback={<Loading />}><Contact /></Suspense>} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App

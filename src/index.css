@@ -8,6 +8,7 @@
     color: hsl(var(--foreground));
     min-height: 100%;
     transition: background-color 0.3s, color 0.43s;
+    scroll-behavior: smooth;
   }
 
   body {

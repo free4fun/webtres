@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next"
 import { useParams, Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { getPostsByLang } from "@/data/blog/getPostsByLang"
+import { AnimatedSection } from "@/components/Animations"
 
 const Article = () => {
   const { t, i18n } = useTranslation()
@@ -34,9 +35,7 @@ const Article = () => {
         <div className="prose prose-neutral dark:prose-invert max-w-none text-base leading-relaxed whitespace-pre-wrap">
           {post.content}
         </div>
-        <Button variant="link" asChild>
-          <Link to="/blog">{t("blog.backToList")}</Link>
-        </Button>
+        <Button><Link to="/blog">{t("blog.backToList")}</Link></Button>
       </div>
     </div>
   )

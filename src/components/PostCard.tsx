@@ -14,7 +14,7 @@ interface PostCardProps {
 export const PostCard = ({ slug, date, title, author, summary, image }: PostCardProps) => {
   return (
     <Link to={`/blog/${slug}`} key={slug}>
-      <Card className="pt-0 pb-6 flex flex-col bg-card text-card-foreground overflow-hidden h-full">
+      <Card className="pt-0 pb-6 flex flex-col bg-card text-card-foreground overflow-hidden h-full transition-all duration-300 hover:scale-[1.02] hover:shadow-md">
         {image && (
           <div className="aspect-[3/2] overflow-hidden rounded-md">
             <img src={image} alt={title} className="w-full h-full object-cover" />

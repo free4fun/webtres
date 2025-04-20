@@ -5,6 +5,8 @@ import { PostCard } from "@/components/PostCard"
 import { MdChevronLeft, MdChevronRight, MdArrowDownward } from "react-icons/md"
 import { Button } from "@/components/ui/button"
 import clsx from "clsx"
+import { motion } from "framer-motion"
+import { MotionSafe } from "@/components/MotionSafe"
 
 const Blog = () => {
   const { t, i18n } = useTranslation()
@@ -59,8 +61,13 @@ const Blog = () => {
               itemsPerRow === 1 ? "grid-cols-1" : "md:grid-cols-3"
             )}
           >
-            {visibleItems.map((post) => (
-              <PostCard key={post.slug} {...post} />
+            {visibleItems.map((item, index) => (
+              <MotionSafe>
+              <motion.div key={item.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1, duration: 0.4 }}>
+                <PostCard key={item.slug} {...item} />
+              </motion.div>
+              </MotionSafe>
+
             ))}
           </div>
 
@@ -81,7 +88,7 @@ const Blog = () => {
         {loading && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm">
             <p className="text-lg font-medium text-foreground animate-pulse">
-              {t("blog.loading")}
+              {t("loading")}
             </p>
           </div>
         )}

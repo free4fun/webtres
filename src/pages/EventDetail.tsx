@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next"
 import { useParams, Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { getEventBySlug } from "@/data/events/getEvents"
+import { AnimatedSection } from "@/components/Animations"
 
 const EventDetail = () => {
   const { t } = useTranslation()
@@ -27,9 +28,7 @@ const EventDetail = () => {
         <h1 className="text-3xl font-bold tracking-tight">{event.title}</h1>
         <p className="text-sm text-muted-foreground">{event.date} — {event.location}</p>
         <p className="text-base leading-relaxed whitespace-pre-wrap">{event.details}</p>
-        <Button variant="link" asChild>
-          <Link to="/events">{t("events.backToList")}</Link>
-        </Button>
+        <Button><Link to="/events">{t("events.backToList")}</Link></Button>
       </div>
     </div>
   )
