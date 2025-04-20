@@ -19,11 +19,11 @@ export const Footer = () => {
         </div>
         <div className="flex gap-4">
           <Link to="https://t.me/webtres_uy" target="_blank"><SiTelegram className="text-foreground w-5 h-5 hover:text-primary" /></Link>
-          <Link to="https://instagram.com/" target="_blank"><SiInstagram className="text-foreground w-5 h-5 hover:text-primary" /></Link>
-          <Link to="https://x.com/" target="_blank"><SiX className="text-foreground w-5 h-5 hover:text-primary" /></Link>
-          <Link to="https://linkedin.com" target="_blank"><SiLinkedin className="text-foreground w-5 h-5 hover:text-primary" /></Link>
-          <Link to="https://youtube.com" target="_blank"><SiYoutube className="text-foreground w-5 h-5 hover:text-primary" /></Link>
-          <Link to="https://github.com" target="_blank"><SiGithub className="text-foreground w-5 h-5 hover:text-primary" /></Link>
+          <Link to="https://www.instagram.com/webtres.uy/" target="_blank"><SiInstagram className="text-foreground w-5 h-5 hover:text-primary" /></Link>
+          <Link to="https://x.com/webtres_uy" target="_blank"><SiX className="text-foreground w-5 h-5 hover:text-primary" /></Link>
+          <Link to="https://linkedin.com/company/webtres-uy" target="_blank"><SiLinkedin className="text-foreground w-5 h-5 hover:text-primary" /></Link>
+          <Link to="https://www.youtube.com/@webtres-uy" target="_blank"><SiYoutube className="text-foreground w-5 h-5 hover:text-primary" /></Link>
+          <Link to="https://github.com/webtres" target="_blank"><SiGithub className="text-foreground w-5 h-5 hover:text-primary" /></Link>
         </div>
       </div>
     </footer>
