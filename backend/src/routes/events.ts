@@ -3,9 +3,10 @@ import { addEvent, getEvents, deleteEvent, updateEvent } from '../controllers/ev
 import { verifyToken } from '../utils/auth'
 
 const router = express.Router()
-
+// RUTA PÚBLICA: obtener eventos
+router.get('/', getEvents)
+// RUTAS PROTEGIDAS (requieren JWT)
 router.post('/', verifyToken, addEvent)
-router.get('/', verifyToken, getEvents)
 router.put('/:slug', verifyToken, updateEvent)
 router.delete('/:slug', verifyToken, deleteEvent)
 

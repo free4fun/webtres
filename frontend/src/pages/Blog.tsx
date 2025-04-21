@@ -7,10 +7,21 @@ import { Button } from "@/components/ui/button"
 import clsx from "clsx"
 import { motion } from "framer-motion"
 import { MotionSafe } from "@/components/MotionSafe"
+import { useEffect, useState } from "react"
+import { BlogPost } from "@/data/blog/types"
 
 const Blog = () => {
   const { t, i18n } = useTranslation()
-  const posts = getPostsByLang(i18n.language).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  const [posts, setPosts] = useState<BlogPost[]>([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const fetchedPosts = await getPostsByLang(i18n.language)
+      setPosts(fetchedPosts)
+    }
+
+    fetchData()
+  }, [i18n.language])
 
   const {
     visibleItems,
@@ -31,7 +42,11 @@ const Blog = () => {
         <p className="text-base">{t("blog.text2")}</p>
       </section>
 
-      <div className="w-full px-4 sm:px-6 lg:px-8 pb-12 bg-background text-foreground relative" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
+      <div
+        className="w-full px-4 sm:px-6 lg:px-8 pb-12 bg-background text-foreground relative"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
         <div className="max-w-6xl mx-auto space-y-10">
           {/* Desktop arrow buttons */}
           {posts.length > itemsPerRow && (
@@ -61,14 +76,21 @@ const Blog = () => {
               itemsPerRow === 1 ? "grid-cols-1" : "md:grid-cols-3"
             )}
           >
-            {visibleItems.map((item, index) => (
-              <MotionSafe>
-              <motion.div key={item.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1, duration: 0.4 }}>
-                <PostCard key={item.slug} {...item} />
-              </motion.div>
-              </MotionSafe>
+{visibleItems.map((item, index) =>
+  item && (
+    <MotionSafe key={item.slug}>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: index * 0.1, duration: 0.4 }}
+      >
+        <PostCard {...item} />
+      </motion.div>
+    </MotionSafe>
+  )
+)}
 
-            ))}
           </div>
 
           {/* Mobile arrow down */}

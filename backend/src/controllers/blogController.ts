@@ -12,7 +12,6 @@ export const addBlogPost = async (req: Request, res: Response): Promise<void> =>
     const exists = posts.some((p: any) => p.slug === slug)
     if (exists) {
       res.status(409).json({ error: 'Ya existe un post con ese slug' })
-      return
     }
     posts.push(req.body)
     await fs.writeFile(blogPath, JSON.stringify(posts, null, 2))

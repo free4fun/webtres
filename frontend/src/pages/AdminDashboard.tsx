@@ -3,6 +3,7 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
 import { authFetch } from '@/lib/authFetch'
+import { publicFetch } from '@/lib/publicFetch'
 import { useNavigate } from 'react-router-dom'
 
 type Mode = 'post' | 'event'
@@ -15,24 +16,25 @@ const AdminDashboard = () => {
     const [events, setEvents] = useState([])
     const [isEditing, setIsEditing] = useState(false)
     const [originalSlug, setOriginalSlug] = useState<string | null>(null)
-
+    const API = import.meta.env.VITE_API_URL
     const navigate = useNavigate()
   
     useEffect(() => {
         const token = localStorage.getItem('jwt')
         if (!token) {
-            navigate('/login')
-            return
+          navigate('/login')
+          return
         }
-        (async ()  => {
-            const [postsRes, eventsRes] = await Promise.all([
-                authFetch('/api/blog/es'),
-                authFetch('/api/events'),
-            ])
-            if (postsRes.ok) setPosts(await postsRes.json())
-            if (eventsRes.ok) setEvents(await eventsRes.json())
+      
+        ;(async () => {
+          const [postsRes, eventsRes] = await Promise.all([
+            publicFetch(`${API}/api/blog/es`),
+            publicFetch(`${API}/api/events`),
+          ])
+          if (postsRes.ok) setPosts(await postsRes.json())
+          if (eventsRes.ok) setEvents(await eventsRes.json())
         })()
-    }, [navigate])
+      }, [navigate])
     const [form, setForm] = useState({
         slug: '',
         title: '',

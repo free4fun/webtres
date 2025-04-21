@@ -2,17 +2,20 @@ import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
 
-import contactRoutes from './src/routes/contact'
-import newsletterRoutes from './src/routes/newsletter'
-import blogRoutes from './src/routes/blog'
-import eventRoutes from './src/routes/events'
-import authRoutes from './src/routes/auth'
+import contactRoutes from './routes/contact'
+import newsletterRoutes from './routes/newsletter'
+import blogRoutes from './routes/blog'
+import eventRoutes from './routes/events'
+import authRoutes from './routes/auth'
 
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:5173', // O el puerto que uses en el frontend
+  credentials: true
+}))
 app.use(express.json());
 app.use('/api/auth', authRoutes)
 app.use('/api/contact', contactRoutes);

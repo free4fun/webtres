@@ -1,14 +1,40 @@
+import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useParams, Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
+import { BlogPost } from "@/data/blog/types"
 import { getPostsByLang } from "@/data/blog/getPostsByLang"
-import { AnimatedSection } from "@/components/Animations"
 
 const Article = () => {
   const { t, i18n } = useTranslation()
   const { slug } = useParams()
-  const posts = getPostsByLang(i18n.language)
-  const post = posts.find((p) => p.slug === slug)
+  const [post, setPost] = useState<BlogPost | null>(null)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const fetchPost = async () => {
+      try {
+        const posts = await getPostsByLang(i18n.language)
+        const found = posts.find((p) => p.slug === slug)
+        setPost(found || null)
+      } catch (err) {
+        console.error(err)
+        setPost(null)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchPost()
+  }, [i18n.language, slug])
+
+  if (loading) {
+    return (
+      <div className="px-4 py-16 text-center text-muted-foreground animate-pulse">
+        {t("loading")}
+      </div>
+    )
+  }
 
   if (!post) {
     return (
@@ -35,7 +61,9 @@ const Article = () => {
         <div className="prose prose-neutral dark:prose-invert max-w-none text-base leading-relaxed whitespace-pre-wrap">
           {post.content}
         </div>
-        <Button><Link to="/blog">{t("blog.backToList")}</Link></Button>
+        <Button className="mt-4" asChild>
+          <Link to="/blog">{t("blog.backToList")}</Link>
+        </Button>
       </div>
     </div>
   )

@@ -6,11 +6,20 @@ import { PostCard } from "@/components/PostCard"
 import { EventCard } from "@/components/EventCard";
 import { getPostsByLang } from "@/data/blog/getPostsByLang";
 import { getEvents } from "@/data/events/getEvents";
+import posts from "@/data/posts";
+import { useEffect } from "react";
+import { BlogPost } from "@/data/blog/types";
+
 
 const Home = () => {
   const { t, i18n } = useTranslation();
-  const posts = getPostsByLang(i18n.language);
-  const events = getEvents();
+  useEffect(() => {
+    const fetchData = async () => {
+      const posts = await getPostsByLang(i18n.language)
+      setPosts(posts)
+    }
+    fetchData()
+  }, [i18n.language])
 
   return (
     <div className="flex flex-col gap-24 py-12 bg-background text-foreground transition-colors duration-300">
@@ -91,3 +100,7 @@ const Home = () => {
 }
 
 export default Home
+function setPosts(posts: BlogPost[]) {
+  throw new Error("Function not implemented.");
+}
+
