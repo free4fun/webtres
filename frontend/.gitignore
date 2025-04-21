@@ -1,0 +1,41 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+.build/
+.vite/
+
+# Local environment variables
+.env
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor/OS/System files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Cache
+.cache/
+.next/
+*.log
+*.tmp
+*.temp
+
+# TypeScript
+*.tsbuildinfo
+
+# Coverage (si usás tests)
+coverage/
+
+# MacOS specific
+.AppleDouble
+.LSOverride
