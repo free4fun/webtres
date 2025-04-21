@@ -9,12 +9,38 @@ import { Button } from "@/components/ui/button"
  * Contact form page for webtres.uy
  */
 const Contact = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
+  const sendContactMessage = async (data: {
+    name: string
+    email: string
+    message: string
+  }) => {
+    const res = await fetch("http://localhost:3001/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+  
+    const result = await res.json()
+    if (!res.ok) throw new Error(result.error || "Error")
+    return result
+  }
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // TODO: Implement form submission logic (email, backend, etc.)
-    alert(t("contact.success"))
+    sendContactMessage({
+      name: (e.currentTarget.elements.namedItem("name") as HTMLInputElement).value,
+      email: (e.currentTarget.elements.namedItem("email") as HTMLInputElement).value,
+      message: (e.currentTarget.elements.namedItem("message") as HTMLTextAreaElement).value,
+    })
+    .then(() => {
+      alert(t("contact.success"))
+      e.currentTarget.reset()
+    })
+    .catch((error) => {
+      console.error("Error:", error)
+      alert(t("contact.error"))
+    })
   }
  
   return (

@@ -5,12 +5,24 @@ import { Button } from "@/components/ui/button"
 import { AnimatedSection } from "@/components/Animations"
 
 const Newsletter = () => {
-  const { t } = useTranslation()
-  const [submitted, setSubmitted] = useState(false)
+  const { t } = useTranslation();
+  const [submitted, setSubmitted] = useState(false);
+  const subscribeNewsletter = async (email: string) => {
+    const res = await fetch("http://localhost:3001/api/newsletter", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email }),
+    })
+  
+    const result = await res.json()
+    if (!res.ok) throw new Error(result.error || "Error")
+    return result
+  }
+  
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // TODO: Replace with actual subscription logic (API call, etc.)
+    subscribeNewsletter(e.currentTarget.email.value)
     setSubmitted(true)
   }
 
