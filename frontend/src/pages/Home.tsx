@@ -1,22 +1,26 @@
-import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
+import { useTranslation } from "react-i18next"
 import { AnimatedSection } from "@/components/Animations"
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"
 import { PostCard } from "@/components/PostCard"
-import { EventCard } from "@/components/EventCard";
-import { getPostsByLang } from "@/data/blog/getPostsByLang";
-import { getEvents } from "@/data/events/getEvents";
-import posts from "@/data/posts";
-import { useEffect } from "react";
-import { BlogPost } from "@/data/blog/types";
-
+import { EventCard } from "@/components/EventCard"
+import { getPostsByLang } from "@/data/blog/getPostsByLang"
+import { getEvents } from "@/data/events/getEvents"
+import { BlogPost } from "@/data/blog/types"
+import { Event } from "@/data/events/types" // si tenés tipado
 
 const Home = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation()
+  const [posts, setPosts] = useState<BlogPost[]>([])
+  const [events, setEvents] = useState<Event[]>([])
+
   useEffect(() => {
     const fetchData = async () => {
-      const posts = await getPostsByLang(i18n.language)
-      setPosts(posts)
+      const fetchedPosts = await getPostsByLang(i18n.language)
+      const fetchedEvents = await getEvents()
+      setPosts(fetchedPosts)
+      setEvents(fetchedEvents)
     }
     fetchData()
   }, [i18n.language])
@@ -28,7 +32,11 @@ const Home = () => {
         <img src="/images/webtres.png" alt="Webtres logo" className="w-24 h-24 sm:w-80 sm:h-80 mx-auto" />
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">{t("home.hero.title")}</h1>
         <p className="text-muted-foreground text-lg">{t("home.hero.description")}</p>
-        <Link to="https://t.me/webtres_uy" target="_blank"><Button className="animate-pulse hover:animate-none transition-transform duration-300 hover:scale-105" size="lg">{t("home.hero.cta")}</Button></Link>
+        <Link to="https://t.me/webtres_uy" target="_blank">
+          <Button className="animate-pulse hover:animate-none transition-transform duration-300 hover:scale-105" size="lg">
+            {t("home.hero.cta")}
+          </Button>
+        </Link>
       </AnimatedSection>
 
       {/* About Section */}
@@ -36,7 +44,11 @@ const Home = () => {
         <div className="max-w-3xl mx-auto space-y-4">
           <h2 className="text-2xl font-semibold">{t("home.about.title")}</h2>
           <p className="text-muted-foreground">{t("home.about.text")}</p>
-          <Link to="/about"><Button variant="secondary" className="transition-colors duration-200 hover:brightness-110 active:scale-95">{t("home.about.button")}</Button></Link>
+          <Link to="/about">
+            <Button variant="secondary" className="transition-colors duration-200 hover:brightness-110 active:scale-95">
+              {t("home.about.button")}
+            </Button>
+          </Link>
         </div>
       </AnimatedSection>
 
@@ -46,7 +58,9 @@ const Home = () => {
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-xl font-semibold">{t("home.events.title")}</h2>
             <Link to="/events">
-              <Button variant="ghost" size="sm" className="transition-colors duration-200 hover:brightness-110 active:scale-95">{t("home.events.cta")}</Button>
+              <Button variant="ghost" size="sm" className="transition-colors duration-200 hover:brightness-110 active:scale-95">
+                {t("home.events.cta")}
+              </Button>
             </Link>
           </div>
           <div className="grid gap-4 md:grid-cols-2">
@@ -64,16 +78,19 @@ const Home = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-xl font-semibold">{t("home.blog.title")}</h2>
-            <Link to="/blog"><Button variant="ghost" size="sm" className="transition-colors duration-200 hover:brightness-110 active:scale-95">{t("home.blog.cta")}</Button></Link>
+            <Link to="/blog">
+              <Button variant="ghost" size="sm" className="transition-colors duration-200 hover:brightness-110 active:scale-95">
+                {t("home.blog.cta")}
+              </Button>
+            </Link>
           </div>
           <div className="grid gap-4 md:grid-cols-3">
             {posts.slice(0, 3).map((post) => (
-              <PostCard {...post}/>
+              <PostCard key={post.slug} {...post} />
             ))}
           </div>
         </div>
       </AnimatedSection>
-
 
       {/* Community Section */}
       <AnimatedSection className="bg-muted/40 py-16 px-4 text-center" vertical={-40}>
@@ -81,18 +98,28 @@ const Home = () => {
           <h2 className="text-2xl font-semibold">{t("home.community.title")}</h2>
           <p className="text-muted-foreground">{t("home.community.description")}</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/community"><Button variant="secondary" className="transition-colors duration-200 hover:brightness-110 active:scale-95">{t("home.community.community")}</Button></Link>
-            <Link to="/contribute"><Button variant="secondary" className="transition-colors duration-200 hover:brightness-110 active:scale-95">{t("home.community.contribute")}</Button></Link>
+            <Link to="/community">
+              <Button variant="secondary" className="transition-colors duration-200 hover:brightness-110 active:scale-95">
+                {t("home.community.community")}
+              </Button>
+            </Link>
+            <Link to="/contribute">
+              <Button variant="secondary" className="transition-colors duration-200 hover:brightness-110 active:scale-95">
+                {t("home.community.contribute")}
+              </Button>
+            </Link>
           </div>
         </div>
       </AnimatedSection>
-      
+
       {/* CTA Section */}
       <AnimatedSection className="max-w-4xl mx-auto text-center space-y-4 px-4" vertical={40}>
         <h2 className="text-2xl font-semibold">{t("home.cta.title")}</h2>
         <p className="text-muted-foreground">{t("home.cta.description")}</p>
         <Link to="/contact">
-          <Button size="lg" className="hover:brightness-110 active:scale-95 animate-pulse hover:animate-none transition-transform duration-300 hover:scale-105">{t("home.cta.button")}</Button>
+          <Button size="lg" className="hover:brightness-110 active:scale-95 animate-pulse hover:animate-none transition-transform duration-300 hover:scale-105">
+            {t("home.cta.button")}
+          </Button>
         </Link>
       </AnimatedSection>
     </div>
@@ -100,7 +127,3 @@ const Home = () => {
 }
 
 export default Home
-function setPosts(posts: BlogPost[]) {
-  throw new Error("Function not implemented.");
-}
-

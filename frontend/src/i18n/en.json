@@ -111,8 +111,7 @@
   },
   "blog": {
     "title": "Blog",
-    "text1": "This is an open and accessible space where we share ideas and experiences around Web3.",
-    "text2": "Here you’ll find everything from practical guides for getting started with blockchain and crypto, to analysis on DAOs, digital identity, privacy, smart contracts, NFTs, and much more. We also share tutorials for Web3 developers, stories about inspiring projects, and coverage of events that connect our community.",
+    "text1": "Here you’ll find everything from practical guides for getting started with blockchain and crypto, to analysis on DAOs, digital identity, privacy, smart contracts, NFTs, and much more.",
     "backToList": "Back to blog",
     "notFound": "Article not found."
   },

@@ -39,7 +39,6 @@ const Blog = () => {
       <section className="text-center space-y-6 px-4 max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold">{t("blog.title")}</h2>
         <p className="text-lg text-muted-foreground">{t("blog.text1")}</p>
-        <p className="text-base">{t("blog.text2")}</p>
       </section>
 
       <div

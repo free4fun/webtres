@@ -28,16 +28,19 @@ export const getPostsByLang = async (req: Request, res: Response): Promise<void>
   try {
     const content = await fs.readFile(blogPath, 'utf8')
     const posts = JSON.parse(content)
+    posts.sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime())
     res.status(200).json(posts)
   } catch {
     res.status(500).json({ error: 'No se pudo leer el archivo de blog' })
   }
 }
 
+
 export const updatePost = async (req: Request, res: Response): Promise<void> => {
+  const lang = req.query.lang || 'es'
   const { slug } = req.params
   const updatedPost = req.body
-  const filePath = path.join(__dirname, '..', '..', 'data', 'blog', 'es.json')
+  const filePath = path.join(__dirname, '..', '..', 'data', 'blog', `${lang}.json`)
   try {
     const raw = await fs.readFile(filePath, 'utf8')
     const posts = JSON.parse(raw)

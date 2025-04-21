@@ -3,10 +3,15 @@ import path from 'path'
 import { Request, Response } from 'express'
 
 const filePath = path.join(__dirname, '..', '..', 'data', 'events', 'events.json')
+
 export const getEvents = async (req: Request, res: Response) => {
   try {
     const raw = await fs.readFile(filePath, 'utf8')
     const events = JSON.parse(raw)
+
+    // Ordenar por fecha descendente
+    events.sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime())
+
     res.status(200).json(events)
   } catch {
     res.status(500).json({ error: 'Error al leer eventos' })
