@@ -1,10 +1,6 @@
 import { MdAutorenew } from "react-icons/md"
 import { useTranslation } from "react-i18next"
 
-/**
- * LoadingOverlay.tsx
- * Fullscreen loading overlay used for route transitions
- */
 const Loading = () => {
   const { t } = useTranslation()
 
