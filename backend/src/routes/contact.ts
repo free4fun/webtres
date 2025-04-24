@@ -31,7 +31,7 @@ router.post("/", async (req: Request, res: Response): Promise<void> => {
   try {
     await sendMail(
       process.env.CONTACT_RECEIVER || "",
-      `📬 Nuevo mensaje de contacto de ${name}`,
+      `Mensaje de contacto de ${name}`,
       `<p><strong>Nombre:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Mensaje:</strong><br/>${message}</p>`
     )
     res.status(200).json({ success: true }); return;

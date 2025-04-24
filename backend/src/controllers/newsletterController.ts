@@ -2,17 +2,16 @@ import { Request, Response } from "express"
 import fetch from "node-fetch"
 import { sendMail } from "../utils/mailer"
 
-interface ContactRequest {
+interface NewsletterRequest {
   name: string
   email: string
-  message: string
   hcaptchaToken?: string
 }
 
-export const handleContact = async (req: Request, res: Response): Promise<void> => {
-  const { name, email, message, hcaptchaToken } = req.body as ContactRequest
+export const handleNewsletter = async (req: Request, res: Response): Promise<void> => {
+  const { name, email, hcaptchaToken } = req.body as NewsletterRequest
 
-  if (!name || !email || !message || !hcaptchaToken) {
+  if (!name || !email || !hcaptchaToken) {
     res.status(400).json({ error: "Missing Required Fields" }); return;
   }
 
@@ -45,12 +44,12 @@ export const handleContact = async (req: Request, res: Response): Promise<void> 
     await sendMail(
       process.env.CONTACT_RECEIVER || "",
       `📬 Nuevo mensaje de contacto de ${name}`,
-      `<p><strong>Nombre:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Mensaje:</strong><br/>${message}</p>`
+      `<p><strong>Nombre:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p>`
     )
 
     res.status(200).json({ success: true }); return;
   } catch (err) {
-    //console.error("Error sending email:", err)
+    //console.error("Error sending email", err)
     res.status(500).json({ error: true }); return;
   }
 }

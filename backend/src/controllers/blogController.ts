@@ -11,13 +11,13 @@ export const addBlogPost = async (req: Request, res: Response): Promise<void> =>
     const posts = JSON.parse(raw)
     const exists = posts.some((p: any) => p.slug === slug)
     if (exists) {
-      res.status(409).json({ error: 'Ya existe un post con ese slug' })
+      res.status(409).json({ error: 'Post Slug already Existis' })
     }
     posts.push(req.body)
     await fs.writeFile(blogPath, JSON.stringify(posts, null, 2))
     res.status(200).json({ success: true })
   } catch {
-    res.status(500).json({ error: 'Error al guardar el post' })
+    res.status(500).json({ error: 'Error Saving Post' })
   }
 }
 
@@ -31,7 +31,7 @@ export const getPostsByLang = async (req: Request, res: Response): Promise<void>
     posts.sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime())
     res.status(200).json(posts)
   } catch {
-    res.status(500).json({ error: 'No se pudo leer el archivo de blog' })
+    res.status(500).json({ error: 'Can Not Read Blog File' })
   }
 }
 
@@ -45,12 +45,12 @@ export const updatePost = async (req: Request, res: Response): Promise<void> => 
     const raw = await fs.readFile(filePath, 'utf8')
     const posts = JSON.parse(raw)
     const index = posts.findIndex((p: any) => p.slug === slug)
-    if (index === -1) res.status(404).json({ error: 'Post no encontrado' })
+    if (index === -1) res.status(404).json({ error: 'Post Not Found' })
     posts[index] = updatedPost
     await fs.writeFile(filePath, JSON.stringify(posts, null, 2))
     res.status(200).json({ success: true })
   } catch {
-    res.status(500).json({ error: 'Error al actualizar el post' })
+    res.status(500).json({ error: 'Error Updating Post' })
   }
 }
 
@@ -63,13 +63,13 @@ export const deletePost = async (req: Request, res: Response): Promise<void> => 
     const posts = JSON.parse(raw)
     const index = posts.findIndex((p: any) => p.slug === slug)
     if (index === -1) {
-      res.status(404).json({ error: 'Post no encontrado' })
+      res.status(404).json({ error: 'Post Not Found' })
       return
     }
     posts.splice(index, 1)
     await fs.writeFile(filePath, JSON.stringify(posts, null, 2))
     res.status(200).json({ success: true })
   } catch {
-    res.status(500).json({ error: 'Error al eliminar el post' })
+    res.status(500).json({ error: 'Error Deleting Post' })
   }
 }

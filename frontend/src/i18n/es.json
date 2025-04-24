@@ -182,7 +182,8 @@
         "title": "Suscribite a la newsletter de webtres",
         "description": "Recibí una vez al mes lo más importante del ecosistema Web3 en Uruguay, Latinoamérica y el mundo. Compartimos eventos, artículos, recursos educativos, oportunidades de colaboración y reflexiones que inspiran.",
         "extendedDescription": "Nuestra newsletter es un boletín mensual donde seleccionamos lo más relevante del mundo descentralizado, con foco en Uruguay y América Latina. Vas a encontrar resúmenes de eventos, artículos destacados en español, oportunidades para sumarte a proyectos y contenido educativo claro y útil. Sin spam, sin ruido. Solo conocimiento curado, directo a tu bandeja de entrada.",
-        "placeholder": "Tu correo electrónico",
+        "name": "Tu nombre",
+        "email": "Tu correo electrónico",
         "subscribe": "Suscribirme",
         "success": "¡Gracias por suscribirte! Te llegará nuestro próximo boletín mensual.",
         "error": "Hubo un problema al suscribirte. Por favor, intentá de nuevo más tarde."

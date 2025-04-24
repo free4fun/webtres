@@ -24,7 +24,8 @@
     "title": "Subscribe to the webtres newsletter",
     "description": "Receive the most important Web3 updates from Uruguay, Latin America and the world once a month. We share events, articles, educational resources, collaboration opportunities, and inspiring ideas.",
     "extendedDescription": "Our newsletter is a monthly digest featuring the most relevant updates from the decentralized world, with a focus on Uruguay and Latin America. You'll find event summaries, standout articles in Spanish, opportunities to join projects, and clear, useful educational content. No spam, no noise—just curated knowledge straight to your inbox.",
-    "placeholder": "Your email address",
+    "name": "Your name",
+    "email": "Your email address",
     "subscribe": "Subscribe",
     "success": "Thanks for subscribing! You'll receive our next monthly newsletter.",
     "error": "There was a problem subscribing. Please try again later."

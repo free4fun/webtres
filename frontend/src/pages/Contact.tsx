@@ -43,6 +43,7 @@ const Contact = () => {
     const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value
     if (!captchaToken) {
       setStatus("error")
+      setIsLoading(false)
       return
     }
     try {
@@ -50,8 +51,10 @@ const Contact = () => {
       setStatus("success")
       form.reset()
     } catch (error) {
-      console.error("Error:", error)
+      //console.error("Error:", error)
       setStatus("error")
+      captchaRef.current?.resetCaptcha() // Reset the captcha
+      setCaptchaToken("")  // Clear the captcha token
     } finally {
       setIsLoading(false)
     }
@@ -78,27 +81,17 @@ const Contact = () => {
             <label className="block text-sm font-medium mb-1">{t("contact.message")}</label>
             <Textarea name="message" rows={5} required />
           </div>
-          <div className="max-w-sm mx-auto">
+          <div className="max-w-sm mx-auto text-center">
             <HCaptcha sitekey={import.meta.env.VITE_HCAPTCHA_SITE_KEY} onVerify={(token) => setCaptchaToken(token)} ref={captchaRef}/>
           </div>
           <Button type="submit" className="w-full">{t("contact.submit")}</Button>
         </form>
 
-        {status && (
-          <div
-            className={clsx(
-              "mt-6 mx-auto max-w-xl px-4 py-3 rounded-md text-sm text-center",
-              status === "success"
-                ? "bg-green-100 text-green-800 border border-green-300"
-                : "bg-red-100 text-red-800 border border-red-300"
-            )}
-          >
+        {status && (<p className={clsx("mt-6 mx-auto max-w-xl px-4 py-3 rounded-md text-sm text-center font-medium animate-fade-in",status === "success"? "text-green-500": "bg-red-100 text-red-800 border border-red-300")}>          
             {status === "success" ? t("contact.success") : t("contact.error")}
-          </div>
+          </p>
         )}
-
       {isLoading && <Loading />}
-
       </AnimatedSection>
     </div>
   )
