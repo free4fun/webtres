@@ -57,14 +57,24 @@ const AdminDashboard = () => {
   useEffect(() => {
     if (!checkedAuth) return
     ;(async () => {
-      const [postsRes, eventsRes] = await Promise.all([
-        publicFetch(`${API}/api/blog/es`),
-        publicFetch(`${API}/api/events`)
-      ])
-      if (postsRes.ok) setPosts(await postsRes.json())
-      if (eventsRes.ok) setEvents(await eventsRes.json())
+      const blogUrl = mode === 'post' ? `${API}/api/blog/${lang}` : null
+      const eventUrl = mode === 'event' ? `${API}/api/events` : null
+  
+      const fetches = []
+      if (blogUrl) fetches.push(publicFetch(blogUrl))
+      if (eventUrl) fetches.push(publicFetch(eventUrl))
+  
+      const [postsRes, eventsRes] = await Promise.all(fetches)
+  
+      if (mode === 'post' && postsRes?.ok) {
+        setPosts(await postsRes.json())
+      }
+      if (mode === 'event' && eventsRes?.ok) {
+        setEvents(await eventsRes.json())
+      }
     })()
-  }, [checkedAuth])
+  }, [checkedAuth, lang, mode])
+  
 
   useEffect(() => {
     setCurrentPage(1)
@@ -121,9 +131,8 @@ const AdminDashboard = () => {
 
   const handleDelete = async (slugToDelete: string) => {
     if (!confirm("¿Seguro que querés eliminar este contenido?")) return
-    const endpoint = mode === 'post'
-      ? `${API}/api/blog/${slugToDelete}?lang=es`
-      : `${API}/api/events/${slugToDelete}`
+    const endpoint = mode === 'post' ? `${API}/api/blog/${slugToDelete}?lang=${lang}` : `${API}/api/events/${slugToDelete}`
+  
 
     const res = await authFetch(endpoint, { method: 'DELETE' })
     if (res.ok) {

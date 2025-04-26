@@ -5,6 +5,14 @@ import fs from "fs"
 
 const router = express.Router()
 
+const normalizeFileName = (filename: string) => {
+  return filename
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-zA-Z0-9-_\.]/g, "-")
+    .toLowerCase()
+}
+
 
 const createStorage = (folder: 'blog' | 'events') => multer.diskStorage({
   destination: (req, file, cb) => {
@@ -14,8 +22,9 @@ const createStorage = (folder: 'blog' | 'events') => multer.diskStorage({
   },
   filename: (req, file, cb) => {
     const ext = path.extname(file.originalname)
-    const base = path.basename(file.originalname, ext).replace(/\s+/g, "-").toLowerCase()
-    const unique = `${base}-${Date.now()}${ext}`
+    const base = path.basename(file.originalname, ext)
+    const normalized = normalizeFileName(base)
+    const unique = `${normalized}-${Date.now()}${ext}`
     cb(null, unique)
   }
 })
