@@ -1,11 +1,13 @@
 import express, { Request, Response } from 'express'
-import { generateToken } from '../utils/auth'
+import { generateToken, verifyToken } from '../utils/auth'
 import dotenv from 'dotenv'
 
 dotenv.config()
 
 const router = express.Router()
-
+router.get('/validate', verifyToken, (req, res) => {
+  res.status(200).json({ valid: true })
+})
 router.post('/login', (req: Request, res: Response): void => {
   const { email, password } = req.body
 

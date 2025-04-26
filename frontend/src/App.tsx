@@ -21,27 +21,27 @@ function App() {
   const Login = lazy(() => import("@/pages/Login"))
 
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<Suspense fallback={<Loading/>}><Home/></Suspense>}/>
-          <Route path="/about" element={<Suspense fallback={<Loading/>}><About/></Suspense>}/>
-          <Route path="/community" element={<Suspense fallback={<Loading/>}><Community/></Suspense>}/>
-          <Route path="/contribute" element={<Suspense fallback={<Loading/>}><Contribute/></Suspense>}/>
-          <Route path="/blog" element={<Suspense fallback={<Loading/>}><Blog/></Suspense>}/>
-          <Route path="/blog/:slug" element={<Suspense fallback={<Loading/>}><Article/></Suspense>}/>
-          <Route path="/events" element={<Suspense fallback={<Loading/>}><Events/></Suspense>}/>
-          <Route path="/events/:slug" element={<Suspense fallback={<Loading/>}><EventDetail/></Suspense>}/>
-          <Route path="/faq" element={<Suspense fallback={<Loading/>}><FAQ/></Suspense>}/>
-          <Route path="/newsletter" element={<Suspense fallback={<Loading/>}><Newsletter/></Suspense>}/>
-          <Route path="/contact" element={<Suspense fallback={<Loading/>}><Contact/></Suspense>}/>
-          <Route path="/admin" element={<Suspense fallback={<Loading/>}><AdminDashboard/></Suspense>}/>
-          <Route path="/login" element={<Suspense fallback={<Loading/>}><Login/></Suspense>}/>
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+        <BrowserRouter>
+          <ScrollToTop />
+          <Routes>
+            <Route element={<Layout />}>
+              <Route path="/" element={<Suspense fallback={<Loading/>}><Home/></Suspense>}/>
+              <Route path="/about" element={<Suspense fallback={<Loading/>}><About/></Suspense>}/>
+              <Route path="/community" element={<Suspense fallback={<Loading/>}><Community/></Suspense>}/>
+              <Route path="/contribute" element={<Suspense fallback={<Loading/>}><Contribute/></Suspense>}/>
+              <Route path="/blog" element={<Suspense fallback={<Loading/>}><Blog/></Suspense>}/>
+              <Route path="/blog/:slug" element={<Suspense fallback={<Loading/>}><Article/></Suspense>}/>
+              <Route path="/events" element={<Suspense fallback={<Loading/>}><Events/></Suspense>}/>
+              <Route path="/events/:slug" element={<Suspense fallback={<Loading/>}><EventDetail/></Suspense>}/>
+              <Route path="/faq" element={<Suspense fallback={<Loading/>}><FAQ/></Suspense>}/>
+              <Route path="/newsletter" element={<Suspense fallback={<Loading/>}><Newsletter/></Suspense>}/>
+              <Route path="/contact" element={<Suspense fallback={<Loading/>}><Contact/></Suspense>}/>
+              <Route path="/admin" element={<Suspense fallback={<Loading/>}><AdminDashboard/></Suspense>}/>
+              <Route path="/login" element={<Suspense fallback={<Loading/>}><Login/></Suspense>}/>
+              <Route path="*" element={<NotFound />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
   )
 }
 

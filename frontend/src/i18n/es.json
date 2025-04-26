@@ -87,7 +87,7 @@
     "events": {
         "title": "Eventos",
         "text1": "Creemos que la comunidad se construye compartiendo tiempo, ideas y experiencias. Por eso, organizamos y difundimos eventos que promueven el encuentro entre personas interesadas en blockchain, cripto, DAOs, identidad digital y todas las tecnologías que forman parte del universo Web3.",
-        "backToList": "Volver a la lista de eventos",
+        "backToList": "Volver a eventos",
         "notFound": "Evento no encontrado."
     },
     "blog": {
@@ -157,7 +157,7 @@
         "body4.title": "Espacios de la comunidad",
         "body4.text1": "Nuestros espacios están pensados para que cualquier persona interesada pueda participar sin miedo ni barreras, ya sea de forma presencial o desde cualquier lugar del Uruguay (¡o del mundo!) a través de nuestros canales digitales.",
         "body4.text2": "En webtres generamos espacios para compartir, aprender y construir comunidad. Espacios donde nadie es \"demasiado principiante\" ni \"demasiado experto\", y donde la tecnología se vive con cercanía.",
-        "body4.items": ["Meetups y eventos presenciales", "Charlas y talleres virtuales", "Proyectos colaborativos", "Canales de comunicación en línea"],
+        "body4.items": ["Meetups y eventos presenciales", "Charlas y talleres virtuales", "Proyectos colaborativos", "Canales de comunicación"],
         "body5.text1": "Creemos que las mejores ideas surgen cuando se encuentran personas con diferentes perspectivas.",
         "body5.text2": "Así que diseñamos nuestros espacios para fomentar el intercambio abierto, el respeto mutuo y la creatividad colectiva.",
         "body5.text3": "Desde una charla técnica hasta una ronda de stickers o una idea loca en una servilleta: todo tiene lugar si suma a la comunidad.",

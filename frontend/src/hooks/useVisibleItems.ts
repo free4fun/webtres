@@ -12,10 +12,20 @@ export const useVisibleItems = (data: any[]) => {
 
   const updateVisibleItems = (newStart: number) => {
     const items: any[] = []
-    for (let i = 0; i < itemsPerRow; i++) {
-      const idx = (newStart + i) % total
-      items.push(data[idx])
+  
+    if (total >= itemsPerRow) {
+      // Carrusel infinito
+      for (let i = 0; i < itemsPerRow; i++) {
+        const idx = (newStart + i) % total
+        items.push(data[idx])
+      }
+    } else {
+      // Mostrar solo lo que hay, sin repetir
+      for (let i = 0; i < total; i++) {
+        items.push(data[i])
+      }
     }
+  
     setVisibleItems(items)
   }
 

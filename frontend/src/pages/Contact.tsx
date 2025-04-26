@@ -1,13 +1,12 @@
 import { useTranslation } from "react-i18next"
-import { useState } from "react"
+import { useRef, useState } from "react"
+import clsx from "clsx"
+import Loading from "@/components/Loading"
 import { AnimatedSection } from "@/components/Animations"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
-import clsx from "clsx"
-import Loading from "@/components/Loading"
 import HCaptcha from "@hcaptcha/react-hcaptcha"
-import { useRef } from "react"
 
 const Contact = () => {
   const { t } = useTranslation()
@@ -71,18 +70,18 @@ const Contact = () => {
         <form className="space-y-4 text-center max-w-xl mx-auto" onSubmit={handleSubmit}>
           <div>
             <label className="block text-sm font-medium mb-1">{t("contact.name")}</label>
-            <Input name="name" required />
+            <Input className="max-w-sm mx-auto" name="name" required />
           </div>
           <div>
             <label className="block text-sm font-medium mb-1">{t("contact.email")}</label>
-            <Input type="email" name="email" required />
+            <Input className="max-w-sm mx-auto" type="email" name="email" required />
           </div>
           <div className="pb-7">
             <label className="block text-sm font-medium mb-1">{t("contact.message")}</label>
-            <Textarea name="message" rows={5} required />
+            <Textarea className="max-w-sm mx-auto" name="message" rows={5} required />
           </div>
           <div className="max-w-sm mx-auto text-center">
-            <HCaptcha sitekey={import.meta.env.VITE_HCAPTCHA_SITE_KEY} onVerify={(token) => setCaptchaToken(token)} ref={captchaRef}/>
+            <HCaptcha sitekey={import.meta.env.VITE_HCAPTCHA_SITE_KEY} onVerify={(token) => setCaptchaToken(token)} ref={captchaRef} />
           </div>
           <Button type="submit" className="w-full">{t("contact.submit")}</Button>
         </form>
@@ -91,8 +90,8 @@ const Contact = () => {
             {status === "success" ? t("contact.success") : t("contact.error")}
           </p>
         )}
-      {isLoading && <Loading />}
       </AnimatedSection>
+      {isLoading && <Loading />}
     </div>
   )
 }

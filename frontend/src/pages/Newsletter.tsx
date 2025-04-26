@@ -71,7 +71,7 @@ const Newsletter = () => {
               <Input className="max-w-sm mx-auto" type="email" name="email" placeholder={t("newsletter.email")} required />
             </div>
             <div className="max-w-sm mx-auto">
-              <HCaptcha sitekey={import.meta.env.VITE_HCAPTCHA_SITE_KEY} onVerify={(token) => setCaptchaToken(token)} ref={captchaRef}/>
+            <HCaptcha sitekey={import.meta.env.VITE_HCAPTCHA_SITE_KEY} onVerify={(token) => setCaptchaToken(token)} ref={captchaRef} />
             </div>
             <Button type="submit" className="animate-pulse hover:animate-none transition-transform duration-300 hover:scale-105 w-full max-w-sm" >{t("newsletter.subscribe")}</Button>
           </form>

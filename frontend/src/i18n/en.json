@@ -107,7 +107,7 @@
   "events": {
     "title": "Events",
     "text1": "We believe community is built by sharing time, ideas, and experiences. That’s why we organize and share events that bring together people interested in blockchain, crypto, DAOs, digital identity, and all things Web3.",
-    "backToList": "Back to events list",
+    "backToList": "Back to events",
     "notFound": "Event not found."
   },
   "blog": {

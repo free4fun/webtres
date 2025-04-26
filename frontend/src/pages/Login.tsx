@@ -17,7 +17,7 @@ const Login = () => {
     if (res.ok) {
       const data = await res.json()
       localStorage.setItem('jwt', data.token)
-      location.href = '/admin' // redirige a admin
+      location.href = '/admin' // redirect to /admin
     } else {
       setError('Credenciales inválidas')
     }

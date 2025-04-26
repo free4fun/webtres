@@ -48,7 +48,7 @@ const EventDetail = () => {
     <div className="w-full px-4 sm:px-6 lg:px-8 py-12 bg-background text-foreground">
       <div className="max-w-3xl mx-auto space-y-6">
         {event.image && (
-          <div className="aspect-[3/2] overflow-hidden rounded-md">
+          <div className="overflow-hidden rounded-md">
             <img src={event.image} alt={event.title} className="w-full h-full object-cover" />
           </div>
         )}

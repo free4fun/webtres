@@ -9,7 +9,7 @@ export const addBlogPost = async (req: Request, res: Response): Promise<void> =>
   try {
     const raw = await fs.readFile(blogPath, 'utf8')
     const posts = JSON.parse(raw)
-    const exists = posts.some((p: any) => p.slug === slug)
+    const exists = posts.filter((p: any) => p.slug === slug).length > 0;
     if (exists) {
       res.status(409).json({ error: 'Post Slug already Existis' })
     }
@@ -45,6 +45,11 @@ export const updatePost = async (req: Request, res: Response): Promise<void> => 
     const raw = await fs.readFile(filePath, 'utf8')
     const posts = JSON.parse(raw)
     const index = posts.findIndex((p: any) => p.slug === slug)
+    const duplicate = posts.find((p: any) => p.slug === updatedPost.slug && p.slug !== slug);
+    if (duplicate) {
+      res.status(409).json({ error: 'Post Slug Already Exists' });
+    }
+
     if (index === -1) res.status(404).json({ error: 'Post Not Found' })
     posts[index] = updatedPost
     await fs.writeFile(filePath, JSON.stringify(posts, null, 2))

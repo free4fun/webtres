@@ -24,7 +24,7 @@ export const addEvent = async (req: Request, res: Response): Promise<void> => {
   try {
     const raw = await fs.readFile(filePath, 'utf8')
     const events = JSON.parse(raw)
-    const exists = events.some((e: any) => e.slug === slug)
+    const exists = events.filter((e: any) => e.slug === slug).length > 0;
     if (exists) {
       res.status(409).json({ error: 'Event Slug Already Exists' })
       return
@@ -45,6 +45,10 @@ export const updateEvent = async (req: Request, res: Response): Promise<void> =>
     const raw = await fs.readFile(filePath, 'utf8')
     const events = JSON.parse(raw)
     const index = events.findIndex((e: any) => e.slug === slug)
+    const duplicate = events.find((p: any) => p.slug === updatedEvent.slug && p.slug !== slug);
+    if (duplicate) {
+      res.status(409).json({ error: 'Event Slug Already Exists' });
+    }
     if (index === -1) res.status(404).json({ error: 'Event Not Found' })
     events[index] = updatedEvent
     await fs.writeFile(filePath, JSON.stringify(events, null, 2))
